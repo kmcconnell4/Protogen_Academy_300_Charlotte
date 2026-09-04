@@ -1,24 +1,30 @@
+import BarChart from '../components/BarChart'
 import BigNumber from '../components/BigNumber'
+import Polaroid from '../components/Polaroid'
 import Scene from '../components/Scene'
-import { storyStats } from '../data/storyData'
+import { diaperRateByPeriod, storyStats } from '../data/storyData'
 
 function DiaperScene() {
   return (
-    <Scene id="diapers" labelledBy="diapers-title" tone="yellow">
+    <Scene id="diapers" labelledBy="diapers-title" tone="green">
       <div className="scene-copy">
-        <p className="scene-copy__label">Diaper City</p>
+        <p className="scene-copy__label">Phase 01: Welcome to Diaper City</p>
         <h2 id="diapers-title">The supplies. The laundry. The diapers.</h2>
-        <BigNumber {...storyStats.diapers} />
-        <p className="scene-copy__body">One diaper roughly every 3 hours, nonstop, for 2.5 years.</p>
-        <div className="chart-frame" aria-label="Daily diaper count tapering to zero as this section enters view">
-          <span className="chart-frame__top">Diaper City</span>
-          <svg viewBox="0 0 520 190" aria-hidden="true">
-            <path className="chart-frame__axis" d="M28 20V166H495" />
-            <path className="chart-frame__line" pathLength="1" d="M30 38C94 36 104 53 145 62S205 81 244 94S321 115 356 127S421 145 489 158" />
-            <path className="chart-frame__flag" d="M490 159v-52m0 2h-44l14 16-14 16h44" />
-          </svg>
-          <span className="chart-frame__bottom">officially potty trained</span>
-        </div>
+        <BigNumber variant="inline" accent="var(--crayon-red)" value={storyStats.diapers.value} label="diapers changed." />
+        <p className="scene-copy__body">One roughly every 3 hours. Nonstop. Night and day. For 2.5 long years.</p>
+        <BarChart
+          data={diaperRateByPeriod}
+          ariaLabel="Daily diaper rate over time, tapering from 10 a day to 0 as she got potty trained"
+        />
+        <p className="quote-bubble">
+          &ldquo;Send help (and maybe more wet wipes).&rdquo;
+          <span className="quote-bubble__attribution">— Mom &amp; Dad&rsquo;s washing machines</span>
+        </p>
+      </div>
+      <div className="scene-visual">
+        <Polaroid rotate={2} caption="candid snapshot :)">
+          [PHOTO PLACEHOLDER: diaper duty]
+        </Polaroid>
       </div>
     </Scene>
   )

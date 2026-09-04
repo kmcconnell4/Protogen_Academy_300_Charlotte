@@ -1,4 +1,4 @@
-# 912 Days 🖍️
+# 912 Days ✨
 
 An interactive data story about the first 2.5 years of a life — told in the small numbers nobody stops to count. Built for **Protogen P302 — Interactive Data Story**.
 
@@ -10,7 +10,7 @@ An interactive data story about the first 2.5 years of a life — told in the sm
 
 ## What this is
 
-A scroll-driven ("scrollytelling") narrative in **7 scenes**, with a **bold crayon / hand-drawn aesthetic**. Funny on the surface, quietly moving by the end. The audience is other parents (who'll feel seen) and non-parent friends (the "you have no idea" angle).
+A scroll-driven ("scrollytelling") narrative in **5 scenes** (plus a bonus modal Easter egg), with a **flat, bold & cartoony aesthetic**. Funny on the surface, quietly moving by the end. The audience is other parents (who'll feel seen) and non-parent friends (the "you have no idea" angle).
 
 Full concept, data, and design direction live in **[BRIEF.md](./BRIEF.md)**. The step-by-step build checklist lives in **[IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md)**.
 
@@ -37,15 +37,15 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
 | Rubric requirement | Where it's addressed |
 |---|---|
 | Site is live, accessible, password-protected | Deploy step in `IMPLEMENTATION_PLAN.md` (Phase 5) |
-| Core flows work end-to-end | All 7 scenes scroll + 2 interactions (Phases 2–3) |
-| Build reflects the industry/user in the brief | `BRIEF.md` subject + crayon direction |
+| Core flows work end-to-end | All 5 scenes scroll + 2 interactions + the star-chart modal (Phases 2–3, Phase 6) |
+| Build reflects the industry/user in the brief | `BRIEF.md` subject + flat/cartoony direction |
 | AI scaffolding present and organized | `BRIEF.md`, `README.md`, `IMPLEMENTATION_PLAN.md`, `/context` docs |
 | README.md and LICENSE in repo root | This file + `LICENSE` |
 | Sensible folder structure | See **Project structure** below |
 | Commit history shows real progress | AI instruction #4 (commit per task) |
 | Descriptive commit messages | AI instruction #4 |
 | BRIEF.md present and matches the build | `BRIEF.md` written as a plan, kept in sync |
-| Visual design fits the context | Bold crayon aesthetic (BRIEF §7) |
+| Visual design fits the context | Flat/cartoony aesthetic (BRIEF §7) |
 
 ---
 
@@ -60,27 +60,35 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
 ├── /context                  ← AI scaffolding / working notes
 │   └── decisions.md          ← running log of design + build decisions
 ├── /public
-│   └── /photos               ← real photos of "Big Simba" (swapped in last)
+│   └── /photos               ← real photos of Charlotte / "Big Simba" (swapped in last)
 └── /src
     ├── /components
     │   ├── Scene.jsx          ← the ONE reusable scene wrapper (reuse everywhere)
-    │   └── BigNumber.jsx      ← reusable "big number" reveal
-    ├── /scenes                ← the 7 scene contents
-    ├── /styles                ← crayon design tokens (colors, type, textures)
+    │   ├── BigNumber.jsx      ← reusable "big number" / inline stat-line reveal
+    │   ├── Card.jsx           ← flat card primitive (pills, quotes, recap card, mentions)
+    │   ├── Polaroid.jsx       ← flat-shadow Polaroid photo placeholder
+    │   ├── BarChart.jsx       ← diaper-scene bar chart
+    │   ├── RankedBarList.jsx  ← books-scene ranked bar list
+    │   ├── TallyTable.jsx     ← outings-scene animal tally
+    │   ├── SiteHeader.jsx     ← persistent sticky header
+    │   ├── Modal.jsx          ← accessible modal shell (focus trap, Escape, restore)
+    │   ├── StarChartModal.jsx ← the star-chart Easter egg
+    │   └── PlacementCard.jsx  ← one Sun/Rising/Moon card inside the star-chart modal
+    ├── /scenes                ← the 5 scroll-scene contents
+    ├── /styles                ← design tokens (colors, type, flat-shadow/card system)
     └── /data                  ← invented dataset (from BRIEF §6)
 ```
 
 ---
 
-## The 7 scenes
+## The 5 scenes (+ 1 modal Easter egg)
 
-1. **912 days ago, you were born** — title slide: headline + big number + stacked Polaroid photos
-2. **Born under Pisces** — birth stats + an immersive starfield constellation moment
-3. **Diaper City → Potty Trained** 🚽 — *interaction: animated high→zero chart*
-4. **The sleep you didn't get** 😴 — ~1,200 hrs lost (the parent twist)
-5. **The book stack** 📚 — *interaction: books stack as you scroll*
-6. **48 tiny expeditions** 🦒 — Big Cat Falls + feeding the giraffes
-7. **The closer** 🦁 — staggered build-up equation, rolling up to "one kid, 912 days"
+1. **912 days ago, you were born** — title slide: headline, birth stats pill (with the Pisces Easter-egg trigger), big number, Polaroid photo
+2. **Diaper City → Potty Trained** 🚽 — *interaction: bar chart tapering to zero*
+3. **The book stack** 📚 — *interaction: ranked bars fill in as you scroll*
+4. **48 tiny expeditions** 🦒 — Big Cat Falls + feeding the giraffes + animal tally (lions, giraffes, penguins)
+5. **The closer** 🦁 — recap card rolling up to "912 days of wonder"
+6. **✨ Easter egg:** Written in the Stars — click the Pisces icon on scene 1 for a modal star chart (Sun/Rising/Moon)
 
 ---
 
@@ -107,7 +115,8 @@ The protected production deployment is available at [912 Days on Vercel](https:/
 
 - Responsive web app (scroll-based, with CSS scroll-snapping so each scene locks into focus). Keep interactions light — the story is the thing, interaction is icing.
 - Primary interaction across the whole piece is **scroll progress**; the 2 named interactions are the only accents.
-- See `BRIEF.md` §8 for scope guardrails (7 scenes hard cap, 2 interactions, reuse one scene pattern).
+- The star-chart modal is fully keyboard-accessible: `role="dialog"` + `aria-modal`, a focus trap while open, Escape/click-outside to close, and focus restored to the trigger button on close.
+- See `BRIEF.md` §8 for scope guardrails (5 scroll scenes + 1 modal Easter egg, 2 interactions, reuse one scene pattern).
 
 ---
 

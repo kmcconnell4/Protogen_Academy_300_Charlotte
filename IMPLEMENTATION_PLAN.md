@@ -60,14 +60,31 @@ Phased build checklist for the P302 interactive data story.
 - [ ] Final check: `BRIEF.md` still matches what was actually built (update if drifted)
 - [x] Confirm README.md + LICENSE are in root and commit history reads cleanly
 
+## Phase 6 — Flat/cartoony visual pivot
+
+The owner independently prototyped the story in Figma Make and preferred that direction over the original crayon/hand-drawn build — see `context/decisions.md` for the full rationale. This phase replaces the crayon system, not the story itself.
+
+- [x] Swap display font to Nunito Sans (heavy weight, uppercase headlines); drop Gaegu
+- [x] Add flat-shadow/card design tokens (`--card-radius`, `--shadow-flat`, `--ease-flat`)
+- [x] Build the new shared component set: `Card`, `Polaroid`, `BarChart`, `RankedBarList`, `TallyTable`, `SiteHeader`, `Modal`, `StarChartModal`, `PlacementCard`
+- [x] Remove the hand-drawn `.scene-frame` SVG outline and the heading underline squiggle from `Scene.jsx`/`App.css`
+- [x] Cut the Sleep scene entirely (`SleepScene.jsx` deleted, `storyStats.sleep` removed) — confirmed intentional, not a restyle
+- [x] Move the star-sign content out of the scroll flow into an accessible modal Easter egg (`StarChartModal`), expanded from 1 to 3 placements (Sun/Rising/Moon), triggered by a Pisces icon on the title scene
+- [x] Rebuild all 5 scenes in the flat/cartoony system (two-column layout, phase-numbered eyebrows, inline stat lines)
+- [x] Add real content: Charlotte's real name (alongside "Big Simba"), penguins as a third favorite animal, per-book read counts, animal sighting tally, diaper rate-per-period data
+- [x] Verify modal keyboard accessibility (focus trap, Escape, click-outside, focus restored on close)
+- [x] Responsive check at existing breakpoints for every new component
+- [x] `npm run lint` and `npm run build` clean
+- [x] Sync all four docs to the new 5-scene/flat-system reality (this pass)
+
 ---
 
 ## Definition of done
 
 - [ ] Live, password-protected, accessible site
-- [ ] All 7 scenes scroll end-to-end
+- [ ] All 5 scenes scroll end-to-end, plus the star-chart modal opens/closes accessibly
 - [ ] Both playful interactions working
-- [ ] Crayon aesthetic evident and intentional
+- [ ] Flat/cartoony aesthetic evident and intentional
 - [ ] Real photos swapped in for placeholders
 - [ ] BRIEF.md, README.md, LICENSE, IMPLEMENTATION_PLAN.md all in repo
 - [ ] Commit history shows real progress over time with descriptive messages

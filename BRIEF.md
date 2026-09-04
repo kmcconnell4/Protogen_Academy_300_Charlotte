@@ -26,15 +26,16 @@ Written for **other parents** (who will feel deeply seen) and **non-parent frien
 
 ## 3. The subject
 
-**"Big Simba"** — a 2.5-year-old force of nature.
+**Charlotte** — nicknamed "Big Simba" — a 2.5-year-old force of nature.
 
 | Detail | Value |
 |---|---|
+| Real name | Charlotte |
+| Nickname | "Big Simba" — used throughout, real name used occasionally for warmth |
 | Born | March 8, 2024, 2:40 PM |
 | Birth stats | 6 lbs 0 oz, 19.5" long |
 | Star sign | Pisces ♓ (dreamy, dramatic, deeply feeling — checks out) |
-| Insists on being called | "Big Simba" — only. |
-| Favorite animal | Lions (obviously), giraffes |
+| Favorite animals | Lions (obviously), giraffes, penguins |
 | Favorite movie | The Lion King |
 | Favorite songs | "The Goldfish" (Laurie Berkner Band), "Hop Little Bunnies," "Going on a Bear Hunt" |
 
@@ -42,37 +43,34 @@ Written for **other parents** (who will feel deeply seen) and **non-parent frien
 
 ---
 
-## 4. The structure — 7 scenes (scroll-driven)
+## 4. The structure — 5 scenes (scroll-driven) + 1 modal Easter egg
 
-A **scrollytelling** narrative. Each scene reveals one surprising cumulative stat with a hand-drawn element that animates in as you scroll. Interaction is the icing; the story is the thing.
+A **scrollytelling** narrative. Each scene reveals one surprising cumulative stat with a bold, cartoony element that animates in as you scroll. Interaction is the icing; the story is the thing.
 
 ### Scene 1 — "912 days ago, you were born."
-The cover slide. Headline + the 912-day big number, plus a stacked pile of Polaroid-style photo placeholders. Kept deliberately clean — no birth date or facts here, just the title moment.
+The cover slide. Headline, the birth date and a short narrative blurb, a 3-segment stat pill (date of arrival / weight / length), and the 912-day big number — plus a single Polaroid-style photo placeholder. The date-of-arrival segment carries a small clickable Pisces icon that opens the star-chart Easter egg (see below).
 
-### Scene 2 — Born under Pisces
-The immersive birth-stats moment, split out from the opening so it can breathe: birth date, "tiny but mighty" stats, and the star sign as the visual centerpiece — a deep night-blue starfield background with a crayon Pisces constellation drawing itself in slowly. Light joke about astrology → sets the funny-but-warm tone. *(A full birth chart — all planets/houses — was considered and deferred; see `context/decisions.md`.)*
+### Scene 2 — Diaper City → Potty Trained 🚽 *(interaction #1)*
+Eyebrow "Phase 01: Welcome to Diaper City." The big number: **~7,300 diapers**. A literal bar chart shows the daily diaper rate across 5 periods (Mo 1–3 → Today), tapering to zero with an "Officially potty trained!" flag on the final bar. A speech-bubble quote ("Send help...") adds a comedic aside.
 
-### Scene 3 — Diaper City → Potty Trained 🚽 *(playful moment #1)*
-The big number: **~7,300 diapers**. A hand-drawn chart shows the daily diaper count starting sky-high ("Diaper City") and tapering to a triumphant zero — the "officially potty trained" flag planted at the end. Framed as *"one diaper roughly every 3 hours, nonstop, for 2.5 years."*
+### Scene 3 — The book stack 📚 *(interaction #2)*
+Eyebrow "Phase 02: Repetitive literary genius." Favorite books render as a horizontal ranked-bar list, widest/bottom = most read:
+1. *Peekaboo Feelings* — ~200 reads (the OG favorite)
+2. *Grumpy Monkey* — ~60 reads
+3. *The Pout-Pout Fish* — ~45 reads
+4. *Fairy Tales* — ~25 reads
+5. *Cinderella* — ~10 reads (newest favorite, on top)
 
-### Scene 4 — The sleep you didn't get 😴
-The parent-perspective twist. Cumulative hours of *your* lost sleep, drawn as a crayon moon that fills in. The one scene that's about the grown-ups — reframes the "cute" data as real labor.
+Big number: **~340 books read**. An "Honorable Mentions" card lists the wider rotating shelf (Jamberry, Green Eggs and Ham, The Lion King).
 
-### Scene 5 — The book stack 📚 *(playful moment #2)*
-As you scroll, favorite books **physically stack on top of each other**, oldest-favorite at the bottom:
-1. *Peekaboo Feelings* (the OG — read an estimated **200 times**)
-2. *Grumpy Monkey*
-3. *Pout-Pout Fish*
-4. *Fairy Tales*
-5. *Cinderella*
+### Scene 4 — 48 tiny expeditions 🦒
+Eyebrow "Phase 03: Adventures galore." Zoo walks, parks, aquarium dates, and puddle splashing. Big Cat Falls is the automatic first stop; feeding the giraffes is a close second (about 6 times and counting). A "Favorite Animal Spotted" tally card: lions ×17, giraffes ×12, penguins ×7.
 
-Big number: **~340 books read**, with a callout for the one read 200 times. *(Other faves — Jamberry, Green Eggs and Ham, Lion King — can join the stack or live in a "the whole shelf" moment.)*
+### Scene 5 — The closer 🦁
+Eyebrow "★ The heartwarming end (for now)." A recap card — "Let's wrap up the adventure so far..." — rolls up diapers, books, and expeditions (each with a one-line callback) plus a final "1 incredible little kid" row, landing on **"912 days of wonder."**
 
-### Scene 6 — 48 tiny expeditions 🦒
-Zoo & outings: **~2 trips a month since she was 6 months old = ~48 trips.** Big Cat Falls is the automatic first stop; feeding the giraffes is a close second (about 6 times and counting — real photos to come). Hand-drawn lions and giraffes. Playful, visual, breezy — a palate cleanser before the emotional close.
-
-### Scene 7 — The closer 🦁
-The equation builds one term at a time as the scene comes into view — *7,300 diapers, then + 340 books, + 48 expeditions, + a thousand mispronounced words* — each in its own crayon color, before landing on the payoff: **"One kid. 912 days."** Ends on the keepsake note — warm, a little devastating, entirely earned.
+### Easter egg — Written in the Stars (modal)
+Clicking the Pisces icon on the title scene opens an accessible modal overlay: "Interlude: Star Chart," with 3 placement cards (Sun/Pisces, Rising/Leo, Moon/Aquarius), each with a hand-drawn constellation, degree/house notation, and a short personality blurb. Closable via Escape, click-outside, or the close button; focus is trapped while open and restored to the trigger on close. This is explicitly a bonus, not one of the 5 scroll scenes or 2 named interactions.
 
 ---
 
@@ -80,10 +78,10 @@ The equation builds one term at a time as the scene comes into view — *7,300 d
 
 | # | Scene | Interaction | Why it stays finishable |
 |---|---|---|---|
-| 1 | Diapers | Animated hand-drawn chart: high → zero ("potty trained!") | Triggered on scroll, no complex state |
-| 2 | Books | Books stack progressively as you scroll | Sequential reveal, pure CSS/scroll animation |
+| 1 | Diapers | Animated bar chart: rate tapering to zero ("potty trained!") | Triggered on scroll, no complex state |
+| 2 | Books | Ranked bars fill in progressively as you scroll | Sequential reveal, pure CSS/scroll animation |
 
-*(A third interaction — a "then → now" word-pronunciation toggle — was cut along with its scene; see `context/decisions.md`. Interaction is icing, not the point, so 2 is fine.)*
+*(A third interaction — a "then → now" word-pronunciation toggle — was cut along with its scene; see `context/decisions.md`. The star-chart modal is a bonus Easter egg, not counted as a 3rd interaction — interaction is icing, not the point, so 2 is fine.)*
 
 Primary interaction across the whole piece = **scroll progress**, reinforced by scroll-snapping so each scene locks into focus rather than scrolling past like a plain list. Everything else is a light accent so the build stays fast.
 
@@ -96,36 +94,38 @@ All figures are believable estimates, not real logs — per the P302 brief, the 
 | Metric | Estimate | How it's derived |
 |---|---|---|
 | Total days | ~912 | Born 3/8/24 → ~2.5 years |
-| Diapers | ~7,300 | ~8/day tapering to 0 at potty training (~age 2.5) |
+| Diapers | ~7,300 | Rate tapers 10/day (Mo 1–3) → 8 → 6 → 3 → 0 (potty trained), averaged across 912 days |
 | The one book, on repeat | ~200 reads | *Peekaboo Feelings* |
-| Total books read | ~340 | Rotating shelf of favorites over 2.5 years |
+| Total books read | ~340 | Sum of the 5-book ranked stack (200+60+45+25+10) plus the wider rotating shelf |
 | Zoo / outings | ~48 | 2/month since 6 months old |
-| Parent sleep lost | **~1,200 hours (~50 full days)** | Yr 1: ~2 hrs/night lost × 365 ≈ 730; Yr 2: ~0.75 hrs × 365 ≈ 275; last 6 mo: ~0.3 hrs × 182 ≈ 55; + illness/teething buffer ≈ 1,200 |
+| Animal sightings | Lions ×17, giraffes ×12, penguins ×7 | Lifetime tally across zoo/aquarium visits |
 | Naps taken | **~1,500** | ~4/day as newborn → 2/day → 1/day, tapering across 912 days |
 | Miles carried | **~250 miles** | ~0.25 mi/day carried/worn, avg across 912 days (~a marathon every ~5 weeks) |
 | "Why?" / questions per day | **~350/day** | Peak toddler-talk comedic stat (~one every ~2 waking minutes) |
+| Rising sign & Moon sign | Leo rising, Aquarius moon | Invented for the star-chart Easter egg, alongside the established Pisces sun sign |
 
-*(All estimates are invented but internally consistent — derivation shown so the plan reads as intentional, not guessed.)*
+*(All estimates are invented but internally consistent — derivation shown so the plan reads as intentional, not guessed. The parent-sleep-lost stat was retired along with the Sleep scene — see `context/decisions.md`.)*
 
 ---
 
-## 7. Visual direction — bold crayon / gleeful chaos
+## 7. Visual direction — flat, bold & cartoony
 
-For the "does it look right?" dimension: the medium matches the subject. A polished corporate chart would fight the story; a childlike sketchbook feel makes it feel drawn *by* and *for* a toddler.
+For the "does it look right?" dimension: bold flat color blocks, hard-edged cartoony drop shadows, and literal, legible charts — a confident, playful editorial look rather than a hand-drawn sketchbook. This direction was arrived at by independently prototyping the story in Figma Make and preferring the result over the project's original crayon/hand-drawn build (see `context/decisions.md` for the full pivot rationale).
 
-- **Aesthetic:** Sketchbook / crayon. Imperfect, slightly wobbly hand-drawn lines. Paper or construction-paper texture background. Every scene is framed by a single hand-traced wobbly outline (one imperfect line, not a crisp geometric border) that draws itself in on scroll.
-- **Palette:** **Bold primary crayon** — gleeful chaos, but curated to ~5 core colors (crayon red, blue, yellow, green, orange) plus a deep night-blue + starfield for the star-sign scene, so it reads intentional, not like the whole 64-box.
-- **Type:** Hand-lettered / crayon display font for headlines + a clean, highly readable body font (legibility over gimmick).
-- **Motion:** Elements "draw themselves" in on scroll. Slightly wobbly, playful easing. Nothing snappy or corporate.
-- **Charts:** Hand-drawn style — squiggly axes, crayon-filled bars, hand-sketched icons (lions, giraffes, moons, books).
-- **Photos:** `[PHOTO PLACEHOLDER]` markers left throughout — real photos of Big Simba to be dropped in (a stacked Polaroid-style trio on the title scene, plus book stack, feeding the giraffes, and closer).
+- **Aesthetic:** Flat and cartoony. Rounded cards with thin ink borders and a hard, non-blurred offset drop shadow (no soft/blurred shadows) — used consistently on Polaroids, stat pills, quote bubbles, and recap cards. No decorative hand-drawn frame around scenes; clean flat color backgrounds instead.
+- **Palette:** The same 5 core crayon hues (red, blue, yellow, green, orange) carried over from the original direction, but used as flat solid fills/borders rather than hand-drawn strokes — plus a deep night-navy + starfield reserved for the star-chart modal.
+- **Type:** One typeface throughout — Nunito Sans — with headlines set heavy-weight, uppercase, and tight-tracking for a bold flat-grotesk feel; body copy stays regular-weight for readability.
+- **Layout:** Left-aligned two-column scenes (copy left, photo/visual right on desktop, stacking to one column on mobile), with a persistent sticky header ("● 912 DAYS / Scroll to read our story ↓") and phase-numbered eyebrow labels ("Phase 01: Welcome to Diaper City," etc.).
+- **Motion:** Bars and ranked lists animate in with a clean, snappy easing on scroll (no wobble). The one deliberate exception is the star-chart modal's constellation SVGs, which keep their original hand-drawn draw-in animation as a framed "interlude" accent, distinct from the rest of the flat system.
+- **Charts:** Literal and legible — an axis-labeled bar chart for diapers, a horizontal ranked-bar list for books, an icon-tally card for animal sightings.
+- **Photos:** `[PHOTO PLACEHOLDER]` markers left throughout, styled as flat-shadow Polaroids with a small tape accent — one on the title scene, one on diapers, one on books, two (stacked) on outings, one on the closer.
 
 ---
 
 ## 8. Scope guardrails (to finish ASAP)
 
-- **7 scenes, hard cap.** The opening was split into a title slide and an immersive birth-stats/star-sign scene (a cover moment and an immersive one are two different emotional beats), and the vocabulary/words scene was cut entirely as inaccurate to how much Big Simba actually talks now — net still 7. No further scene creep beyond this.
-- **2 interactions, as specified.** Everything else is scroll-only (plus scroll-snapping, so each scene locks into view rather than scrolling past).
+- **5 scroll scenes + 1 modal Easter egg, hard cap.** History: started at 7 → split the opening into two (8) → cut the words/vocabulary scene (back to 7) → cut the Sleep scene entirely and moved the star-sign content out of the scroll flow into a click-triggered modal (5 scroll scenes + 1 Easter egg). Each change is logged with its reasoning in `context/decisions.md` — this is intentional iteration, not drift. No further scene creep beyond this.
+- **2 interactions, as specified.** Everything else is scroll-only (plus scroll-snapping, so each scene locks into view rather than scrolling past). The star-chart modal is a bonus Easter egg, not a 3rd interaction.
 - **Reuse a single component pattern** for each scene (a scene wrapper + a "big number" reveal) rather than bespoke builds per scene.
 - **Placeholders over perfection** for photos and bracketed stats — fill last.
 - Deploy early, then polish. Password-protect the site per Protogen guidance.
@@ -135,9 +135,9 @@ For the "does it look right?" dimension: the medium matches the subject. A polis
 ## 9. What "done" looks like
 
 - [ ] Live, password-protected, accessible site
-- [ ] All 7 scenes scroll end-to-end
+- [ ] All 5 scenes scroll end-to-end, plus the star-chart modal opens/closes accessibly
 - [ ] 2 playful interactions working (diaper chart, book stack)
-- [ ] Crayon aesthetic evident and intentional
+- [ ] Flat/cartoony aesthetic evident and intentional
 - [ ] Photo placeholders swapped for real images
 - [ ] BRIEF.md in repo root, matching the build
 - [ ] README.md + LICENSE in root

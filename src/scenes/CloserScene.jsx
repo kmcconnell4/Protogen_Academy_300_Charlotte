@@ -1,21 +1,40 @@
-import BigNumber from '../components/BigNumber'
+import Card from '../components/Card'
+import Polaroid from '../components/Polaroid'
 import Scene from '../components/Scene'
+
+const recapRows = [
+  { icon: '✏️', title: '7,300 diapers changed', detail: 'And we survived Diaper City!', delay: 0 },
+  { icon: '📚', title: '340 books read & re-read', detail: 'Peekaboo Feelings: the undisputed champ', delay: 90 },
+  { icon: '🦒', title: '48 family outings & zoo safaris', detail: 'Lions: 17, giraffes: 12, penguins: 7', delay: 180 },
+  { icon: '❤️', title: '1 incredible little kid', detail: 'Who turned our lives completely upside down', delay: 270 },
+]
 
 function CloserScene() {
   return (
-    <Scene id="closer" labelledBy="closer-title" tone="blue">
+    <Scene id="closer" labelledBy="closer-title" tone="pink">
       <div className="scene-copy">
-        <p className="scene-copy__label">Add it all up</p>
-        <ul className="closer-equation" aria-label="7,300 diapers, 340 books, 48 expeditions, and a thousand mispronounced words">
-          <li className="closer-equation__item closer-equation__item--1">7,300 diapers</li>
-          <li className="closer-equation__item closer-equation__item--2">340 books</li>
-          <li className="closer-equation__item closer-equation__item--3">48 expeditions</li>
-          <li className="closer-equation__item closer-equation__item--4">a thousand mispronounced words</li>
-        </ul>
-        <h2 id="closer-title" className="closer-finale">One kid. 912 days.</h2>
-        <BigNumber value="1" label="Big Simba" detail="And it went by in a blink." />
-        <p className="scene-copy__body">All those overwhelming totals were just this one small, enormous life.</p>
-        <div className="photo-placeholder">[PHOTO PLACEHOLDER: the closer]</div>
+        <p className="scene-copy__label">★ The heartwarming end (for now)</p>
+        <h1 id="closer-title">912 days of wonder.</h1>
+        <Card className="recap-card" shadow>
+          <p className="recap-card__title">Let&rsquo;s wrap up the adventure so far...</p>
+          <ul className="recap-card__list">
+            {recapRows.map((row) => (
+              <li key={row.title} className="recap-card__row" style={{ '--row-delay': `${row.delay}ms` }}>
+                <span className="recap-card__row-title">
+                  <span aria-hidden="true">{row.icon}</span> {row.title}
+                </span>
+                <span className="recap-card__row-detail">{row.detail}</span>
+              </li>
+            ))}
+          </ul>
+        </Card>
+        <p className="quote-bubble">&ldquo;And it all went by in an absolute blink.&rdquo;</p>
+        <p className="scene-copy__body">Signing off from the nursery floor, Mom, Dad, &amp; Big Simba 😊</p>
+      </div>
+      <div className="scene-visual">
+        <Polaroid rotate={-2} caption="Our little Big Simba 💛">
+          [PHOTO PLACEHOLDER: the closer]
+        </Polaroid>
       </div>
     </Scene>
   )

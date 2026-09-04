@@ -16,8 +16,6 @@ body {
   margin: 0;
   min-width: 20rem;
   background-color: var(--paper);
-  background-image: radial-gradient(var(--paper-speck) 0.045rem, transparent 0.055rem);
-  background-size: 0.55rem 0.55rem;
 }
 
 button,
