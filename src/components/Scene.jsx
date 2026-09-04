@@ -7,18 +7,42 @@ function Scene({ children, className = '', id, labelledBy, tone = 'paper' }) {
   useEffect(() => {
     const scene = sceneRef.current
 
-    if (!scene || !('IntersectionObserver' in window)) {
+    if (!scene) {
       setProgress(1)
       return undefined
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => setProgress(entry.intersectionRatio),
-      { threshold: [0, 0.15, 0.35, 0.6, 0.85, 1] },
-    )
+    const updateProgress = () => {
+      const bounds = scene.getBoundingClientRect()
+      const visibleHeight = Math.min(bounds.bottom, window.innerHeight) - Math.max(bounds.top, 0)
+      const ratio = Math.max(0, visibleHeight) / Math.min(bounds.height, window.innerHeight)
+
+      setProgress((current) => Math.max(current, ratio))
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true })
+    window.addEventListener('resize', updateProgress)
+    updateProgress()
+
+    if (!('IntersectionObserver' in window)) {
+      return () => {
+        window.removeEventListener('scroll', updateProgress)
+        window.removeEventListener('resize', updateProgress)
+      }
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setProgress((current) => Math.max(current, entry.intersectionRatio))
+      }
+    }, { threshold: [0, 0.15, 0.35, 0.6, 0.85, 1] })
 
     observer.observe(scene)
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', updateProgress)
+      window.removeEventListener('resize', updateProgress)
+    }
   }, [])
 
   return (

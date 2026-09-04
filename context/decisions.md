@@ -17,6 +17,10 @@ A running record of design and build decisions. **Append a new dated entry each 
 
 ## Decisions
 
+### 2026-09-04 — Phase 3 interactions latch on exposure
+- The diaper chart and five-book stack are triggered by the shared scene visibility signal and retain their completed state after a reader scrolls past. The word comparison is one semantic pressed toggle.
+- **Why:** this keeps the three brief-defined accents light and ensures readers who scroll quickly see the finished story state instead of an empty chart or stack.
+
 ### 2026-09-04 — Phase 2 story before interaction
 - Built all seven scenes as static scroll spreads before adding the diaper line animation, progressive book stack, or word control.
 - **Why:** the brief calls interaction "icing" and Phase 2 explicitly prioritizes an end-to-end readable story; each later interaction now has a clear, working static fallback.

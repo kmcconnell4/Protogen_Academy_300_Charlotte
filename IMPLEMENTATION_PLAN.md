@@ -37,10 +37,10 @@ Phased build checklist for the P302 interactive data story.
 
 ## Phase 3 — The 3 playful interactions (the "icing")
 
-- [ ] **Diaper chart** — animate the hand-drawn line from "Diaper City" high → zero ("Potty trained!" flag) on scroll
-- [ ] **Book stack** — books progressively stack on top of each other as you scroll (Peekaboo Feelings bottom → Grumpy Monkey → Pout-Pout Fish → Fairy Tales → Cinderella)
-- [ ] **Word slider** — "then → now" toggle that morphs a word from last year's pronunciation to today's
-- [ ] Verify each interaction works and degrades gracefully if scrolled past quickly
+- [x] **Diaper chart** — animate the hand-drawn line from "Diaper City" high → zero ("Potty trained!" flag) on scroll
+- [x] **Book stack** — books progressively stack on top of each other as you scroll (Peekaboo Feelings bottom → Grumpy Monkey → Pout-Pout Fish → Fairy Tales → Cinderella)
+- [x] **Word slider** — "then → now" toggle that morphs a word from last year's pronunciation to today's
+- [x] Verify each interaction works and degrades gracefully if scrolled past quickly
 
 ## Phase 4 — Polish & responsiveness
 
