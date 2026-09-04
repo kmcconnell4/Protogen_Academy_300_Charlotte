@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap');
+
+:root {
+  --crayon-red: #e54635;
+  --crayon-blue: #2377c9;
+  --crayon-yellow: #f6c744;
+  --crayon-green: #3d9a5a;
+  --crayon-orange: #ee812f;
+  --ink: #17263a;
+  --paper: #fffaf0;
+  --paper-blue: #dbeeff;
+  --paper-yellow: #fff0a8;
+  --paper-green: #d9f0cf;
+  --display-font: 'Gaegu', cursive;
+  --body-font: 'Nunito Sans', sans-serif;
+  --content-width: 70rem;
+  --edge-space: clamp(1.25rem, 5vw, 5rem);
+  --ink-line: 0.18rem;
+  --paper-speck: rgba(23, 38, 58, 0.06);
+  --ease-crayon: cubic-bezier(0.16, 1, 0.3, 1);
+}

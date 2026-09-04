@@ -16,13 +16,13 @@ Phased build checklist for the P302 interactive data story.
 
 ## Phase 1 — Design foundation (crayon system)
 
-- [ ] Define crayon color tokens (~5 bold primaries: red, blue, yellow, green, orange) in `/src/styles`
-- [ ] Add hand-lettered display font + clean readable body font
-- [ ] Add paper / construction-paper background texture
-- [ ] Build the reusable **`Scene`** wrapper component (full-height, scroll-triggered reveal)
-- [ ] Build the reusable **`BigNumber`** reveal component (large hand-drawn stat callout)
-- [ ] Set up scroll-progress detection (e.g. IntersectionObserver) used by all scenes
-- [ ] Create `/src/data` file with all invented stats from BRIEF §6
+- [x] Define crayon color tokens (~5 bold primaries: red, blue, yellow, green, orange) in `/src/styles`
+- [x] Add hand-lettered display font + clean readable body font
+- [x] Add paper / construction-paper background texture
+- [x] Build the reusable **`Scene`** wrapper component (full-height, scroll-triggered reveal)
+- [x] Build the reusable **`BigNumber`** reveal component (large hand-drawn stat callout)
+- [x] Set up scroll-progress detection (e.g. IntersectionObserver) used by all scenes
+- [x] Create `/src/data` file with all invented stats from BRIEF §6
 
 ## Phase 2 — Build the 7 scenes (story first, no fancy interaction yet)
 

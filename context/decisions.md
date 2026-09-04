@@ -17,6 +17,11 @@ A running record of design and build decisions. **Append a new dated entry each 
 
 ## Decisions
 
+### 2026-09-04 — Phase 1 crayon system & type
+- **Colors:** Use a full five-color primary crayon system (red, blue, yellow, green, orange) on a bright paper ground, with navy ink for text. The colors have distinct semantic roles rather than decorative one-off accents.
+- **Typography:** Use Gaegu for hand-lettered display moments and Nunito Sans for long-form body copy. This protects readability while keeping the headlines recognizably kid-made.
+- **Why:** The combination honors the brief's gleeful sketchbook direction while avoiding a generic children's-site palette or decorative type that becomes difficult to read.
+
 ### 2026-09-04 — Phase 0 stack: Vite + React
 - **Decision:** Use Vite + React for the responsive, scroll-driven story, with the README folder structure created at scaffold time.
 - **Why:** It is the brief's suggested lightweight stack and supports the single-page storytelling experience without adding framework or library scope.
