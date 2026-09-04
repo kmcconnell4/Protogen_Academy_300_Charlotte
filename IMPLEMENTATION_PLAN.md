@@ -8,11 +8,11 @@ Phased build checklist for the P302 interactive data story.
 
 ## Phase 0 — Repo & scaffolding setup
 
-- [ ] Initialize project (Vite + React, or framework of choice) and commit the scaffold
-- [ ] Add `README.md`, `LICENSE`, `BRIEF.md`, and this file to the repo root
-- [ ] Create `/context/decisions.md` to log design + build decisions as you go
-- [ ] Set up folder structure per README (`/src/components`, `/src/scenes`, `/src/styles`, `/src/data`, `/public/photos`)
-- [ ] Confirm dev server runs locally (`npm run dev`)
+- [x] Initialize project (Vite + React, or framework of choice) and commit the scaffold
+- [x] Add `README.md`, `LICENSE`, `BRIEF.md`, and this file to the repo root
+- [x] Create `/context/decisions.md` to log design + build decisions as you go
+- [x] Set up folder structure per README (`/src/components`, `/src/scenes`, `/src/styles`, `/src/data`, `/public/photos`)
+- [x] Confirm dev server runs locally (`npm run dev`)
 
 ## Phase 1 — Design foundation (crayon system)
 

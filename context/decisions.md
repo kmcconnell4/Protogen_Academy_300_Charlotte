@@ -17,6 +17,10 @@ A running record of design and build decisions. **Append a new dated entry each 
 
 ## Decisions
 
+### 2026-09-04 — Phase 0 stack: Vite + React
+- **Decision:** Use Vite + React for the responsive, scroll-driven story, with the README folder structure created at scaffold time.
+- **Why:** It is the brief's suggested lightweight stack and supports the single-page storytelling experience without adding framework or library scope.
+
 ### 2026-09-04 — Project kickoff & concept locked
 - **Concept:** "912 Days" — an interactive data story about the first 2.5 years of a life, told in small cumulative numbers. Chosen over dashboard/mobile options because the invented-data + personal-narrative fit P302 best (story over dataset).
 - **Point of view:** small repetitive moments compound into something staggering; funny on top, quietly moving underneath.
