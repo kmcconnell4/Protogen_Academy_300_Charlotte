@@ -17,6 +17,10 @@ A running record of design and build decisions. **Append a new dated entry each 
 
 ## Decisions
 
+### 2026-09-04 — Phase 4 motion, accessibility & placeholders
+- Added one coordinated draw-in language for scene frames, heading underlines, constellation lines, stars, and the vocabulary curve. Content remains visible before motion, and the existing reduced-motion rule collapses animation and transitions.
+- Photo markers remain explicit, friendly sketchbook frames until real Big Simba images are supplied; the final photo-swap task stays open by design.
+
 ### 2026-09-04 — Phase 3 interactions latch on exposure
 - The diaper chart and five-book stack are triggered by the shared scene visibility signal and retain their completed state after a reader scrolls past. The word comparison is one semantic pressed toggle.
 - **Why:** this keeps the three brief-defined accents light and ensures readers who scroll quickly see the finished story state instead of an empty chart or stack.

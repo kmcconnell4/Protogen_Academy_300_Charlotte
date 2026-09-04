@@ -44,10 +44,10 @@ Phased build checklist for the P302 interactive data story.
 
 ## Phase 4 — Polish & responsiveness
 
-- [ ] "Draw themselves in" motion on hand-drawn elements (wobbly, playful easing)
-- [ ] Responsive: verify story works on mobile / small screens (single-column scroll)
-- [ ] Handle empty/edge states (e.g. photos not yet added show a friendly placeholder)
-- [ ] Accessibility pass (readable contrast, alt text on drawn elements, reduced-motion fallback)
+- [x] "Draw themselves in" motion on hand-drawn elements (wobbly, playful easing)
+- [x] Responsive: verify story works on mobile / small screens (single-column scroll)
+- [x] Handle empty/edge states (e.g. photos not yet added show a friendly placeholder)
+- [x] Accessibility pass (readable contrast, alt text on drawn elements, reduced-motion fallback)
 - [ ] Swap remaining `[PHOTO PLACEHOLDER]` markers for real photos of Big Simba
 
 ## Phase 5 — Deploy & finalize
