@@ -42,12 +42,19 @@ function BirthScene() {
       </div>
       <div className="scene-visual">
         <div className="photo-stack">
-          <Polaroid rotate={-3} caption="candid snapshot :)">
-            [PHOTO PLACEHOLDER: birth 1]
-          </Polaroid>
-          <Polaroid rotate={2} caption="hospital hello" className="polaroid--offset-right">
-            [PHOTO PLACEHOLDER: birth 2]
-          </Polaroid>
+          <Polaroid
+            rotate={-3}
+            caption="candid snapshot :)"
+            src="/photos/BIRTH1_newborn1.JPG"
+            alt="Newborn Charlotte asleep in a white bow headband"
+          />
+          <Polaroid
+            rotate={2}
+            caption="watch me go! 🛝"
+            className="polaroid--offset-right"
+            src="/photos/Birth2_Slide.PNG"
+            alt="Charlotte grinning on a playground slide"
+          />
         </div>
       </div>
       <StarChartModal isOpen={isChartOpen} onClose={() => setIsChartOpen(false)} />

@@ -63,8 +63,8 @@ Eyebrow "Phase 02: Repetitive literary genius." Favorite books render as a horiz
 
 Big number: **~340 books read**. An "Honorable Mentions" card lists the wider rotating shelf (Jamberry, Green Eggs and Ham, The Lion King).
 
-### Scene 4 — 48 tiny expeditions 🦒
-Eyebrow "Phase 03: Adventures galore." Zoo walks, parks, aquarium dates, and puddle splashing. Big Cat Falls is the automatic first stop; feeding the giraffes is a close second (about 6 times and counting). A "Favorite Animal Spotted" tally card: lions ×17, giraffes ×12, penguins ×7.
+### Scene 4 — The adventure map 🗺️
+Eyebrow "Phase 03: Adventures galore." Headline "We've been on so many adventures." — a large, cartoony illustrated map (hand-drawn SVG: landmass, river, a dashed road connecting the stops) with 5 pins for real places: Philadelphia Zoo, Adventure Aquarium, Please Touch Museum, Mom Mom and Grandpop's House (Newtown, PA), and PG & Pappy's House (Beach Lake, PA). Tapping a pin opens an accessible pop-up with a short story and photos from that place. The Philadelphia Zoo pin carries what used to be this scene's whole body: the "~48 tiny expeditions" stat, Big Cat Falls/giraffe-feeding copy, and the "Favorite Animal Spotted" tally card (lions ×17, giraffes ×12, penguins ×7) — folded in rather than dropped when the scene became map-driven. The pin/pop-up pattern is this scene's core content-delivery mechanism (like scroll-snap is for the whole site), not counted as a 3rd interaction — see §5.
 
 ### Scene 5 — The closer 🦁
 Eyebrow "★ The heartwarming end (for now)." A recap card — "Let's wrap up the adventure so far..." — rolls up diapers, books, and expeditions (each with a one-line callback) plus a final "1 incredible little kid" row, landing on **"912 days of wonder."**
@@ -81,7 +81,7 @@ Clicking the Pisces icon on the title scene opens an accessible modal overlay: "
 | 1 | Diapers | Animated bar chart: rate tapering to zero ("potty trained!") | Triggered on scroll, no complex state |
 | 2 | Books | Ranked bars fill in progressively as you scroll | Sequential reveal, pure CSS/scroll animation |
 
-*(A third interaction — a "then → now" word-pronunciation toggle — was cut along with its scene; see `context/decisions.md`. The star-chart modal is a bonus Easter egg, not counted as a 3rd interaction — interaction is icing, not the point, so 2 is fine.)*
+*(A third interaction — a "then → now" word-pronunciation toggle — was cut along with its scene; see `context/decisions.md`. The star-chart modal is a bonus Easter egg, and the adventure map's pin-and-pop-up pattern is Scene 4's core content-delivery mechanism — neither is counted as a 3rd interaction. Interaction is icing, not the point, so 2 named interactions is fine.)*
 
 Primary interaction across the whole piece = **scroll progress**, reinforced by scroll-snapping so each scene locks into focus rather than scrolling past like a plain list. Everything else is a light accent so the build stays fast.
 
@@ -105,6 +105,8 @@ All figures are believable estimates, not real logs — per the P302 brief, the 
 | Rising sign & Moon sign | Leo rising, Aquarius moon | Invented for the star-chart Easter egg, alongside the established Pisces sun sign |
 
 *(All estimates are invented but internally consistent — derivation shown so the plan reads as intentional, not guessed. The parent-sleep-lost stat was retired along with the Sleep scene — see `context/decisions.md`.)*
+
+The adventure map's 5 locations are real places, not invented data — each carries real photos and a short story rather than an estimated stat. Photos were matched to locations by filename/content, with confidence levels logged in `context/decisions.md`; Mom Mom and Grandpop's House has none yet.
 
 ---
 

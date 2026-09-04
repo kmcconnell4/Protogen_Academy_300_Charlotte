@@ -69,11 +69,14 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
     │   ├── Polaroid.jsx       ← flat-shadow Polaroid photo placeholder
     │   ├── BarChart.jsx       ← diaper-scene bar chart
     │   ├── RankedBarList.jsx  ← books-scene ranked bar list
-    │   ├── TallyTable.jsx     ← outings-scene animal tally
+    │   ├── TallyTable.jsx     ← animal tally (used inside the zoo pin's pop-up)
     │   ├── SiteHeader.jsx     ← persistent sticky header
     │   ├── Modal.jsx          ← accessible modal shell (focus trap, Escape, restore)
     │   ├── StarChartModal.jsx ← the star-chart Easter egg
-    │   └── PlacementCard.jsx  ← one Sun/Rising/Moon card inside the star-chart modal
+    │   ├── PlacementCard.jsx  ← one Sun/Rising/Moon card inside the star-chart modal
+    │   ├── AdventureMap.jsx   ← the outings-scene illustrated map + pins
+    │   ├── LocationModal.jsx  ← per-pin story + photos pop-up (reuses Modal.jsx)
+    │   └── PhotoGrid.jsx      ← compact photo grid used inside LocationModal
     ├── /scenes                ← the 5 scroll-scene contents
     ├── /styles                ← design tokens (colors, type, flat-shadow/card system)
     └── /data                  ← invented dataset (from BRIEF §6)
@@ -86,7 +89,7 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
 1. **912 days ago, you were born** — title slide: headline, birth stats pill (with the Pisces Easter-egg trigger), big number, Polaroid photo
 2. **Diaper City → Potty Trained** 🚽 — *interaction: bar chart tapering to zero*
 3. **The book stack** 📚 — *interaction: ranked bars fill in as you scroll*
-4. **48 tiny expeditions** 🦒 — Big Cat Falls + feeding the giraffes + animal tally (lions, giraffes, penguins)
+4. **The adventure map** 🗺️ — a large illustrated map with 5 pins (Zoo, Aquarium, Please Touch Museum, Mom Mom & Grandpop's, PG & Pappy's); tap a pin for a story + photos, the Zoo pin carries the old Big Cat Falls/giraffe/animal-tally content
 5. **The closer** 🦁 — recap card rolling up to "912 days of wonder"
 6. **✨ Easter egg:** Written in the Stars — click the Pisces icon on scene 1 for a modal star chart (Sun/Rising/Moon)
 

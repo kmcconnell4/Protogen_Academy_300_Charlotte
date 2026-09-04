@@ -7,10 +7,14 @@ function TallyTable({ title, rows, ariaLabel }) {
       <ul className="tally-table__list">
         {rows.map((row) => (
           <li key={row.animal} className="tally-table__row">
-            <span className="tally-table__animal">{row.animal}</span>
-            <span className="tally-table__count">
-              <span aria-hidden="true">❤</span> ×{row.count}
-              <span className="sr-only"> sightings</span>
+            <span className="tally-table__animal">
+              {row.animal}
+              <span className="sr-only"> — {row.count} sightings</span>
+            </span>
+            <span className="tally-table__icons" aria-hidden="true">
+              {Array.from({ length: row.count }, (_, index) => (
+                <span key={index}>{row.icon}</span>
+              ))}
             </span>
           </li>
         ))}

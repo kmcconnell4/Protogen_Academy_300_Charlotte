@@ -50,7 +50,7 @@ Phased build checklist for the P302 interactive data story.
 - [x] Responsive: verify story works on mobile / small screens (single-column scroll)
 - [x] Handle empty/edge states (e.g. photos not yet added show a friendly placeholder)
 - [x] Accessibility pass (readable contrast, alt text on drawn elements, reduced-motion fallback)
-- [ ] Swap remaining `[PHOTO PLACEHOLDER]` markers for real photos of Big Simba (now 6 total, including the 3-photo title-slide stack and the giraffe-feeding photo)
+- [x] Swap most `[PHOTO PLACEHOLDER]` markers for real photos/videos: birth (2), diaper duty (video), reading time (video), feeding the giraffes (2) — 6 of 8 done. The closer scene's 2 placeholders are still open; no file was renamed to match them yet.
 
 ## Phase 5 — Deploy & finalize
 
@@ -77,14 +77,30 @@ The owner independently prototyped the story in Figma Make and preferred that di
 - [x] `npm run lint` and `npm run build` clean
 - [x] Sync all four docs to the new 5-scene/flat-system reality (this pass)
 
+## Phase 7 — Adventure map rework (Scene 4)
+
+The outings scene became a large illustrated map with 5 clickable pins (Philadelphia Zoo, Adventure Aquarium, Please Touch Museum, Mom Mom & Grandpop's House, PG & Pappy's House), each opening a pop-up with a story and real photos. The old scene body (Big Cat Falls/giraffe-feeding copy, the animal tally) folded into the zoo pin rather than being dropped.
+
+- [x] Add `locations` dataset to `storyData.js`, folding in `favoriteOutings`/`animalTally`/`storyStats.expeditions` for the zoo entry
+- [x] Build `AdventureMap.jsx` (hand-drawn SVG landmass/river/road + data-driven pin buttons)
+- [x] Build `LocationModal.jsx` (reuses `Modal.jsx`) + `PhotoGrid.jsx`
+- [x] Rewrite `OutingsScene.jsx`: new headline, full-width map, removed old TallyTable/photo-stack usage
+- [x] Add `#outings .scene__content` layout override + map/pin/modal CSS to `App.css`
+- [x] Verify all 5 pins render, open correct pop-up content, zoo pin shows folded-in content correctly
+- [x] Fix: `TallyTable` text was invisible inside the dark modal (inherited white-on-cream) — added explicit ink color
+- [x] Keyboard accessibility pass (pin tab order, modal focus trap/restore, Escape) — verified
+- [x] Responsive check at mobile width — fixed overlapping pin tags by respacing the southern 3-pin cluster
+- [x] `npm run lint` and `npm run build` clean
+- [ ] Owner to confirm/replace confidence-flagged photo guesses (see `context/decisions.md`) and supply photos for Mom Mom & Grandpop's House
+
 ---
 
 ## Definition of done
 
 - [ ] Live, password-protected, accessible site
-- [ ] All 5 scenes scroll end-to-end, plus the star-chart modal opens/closes accessibly
+- [ ] All 5 scenes scroll end-to-end, plus the star-chart modal and adventure-map pins open/close accessibly
 - [ ] Both playful interactions working
 - [ ] Flat/cartoony aesthetic evident and intentional
-- [ ] Real photos swapped in for placeholders
+- [ ] Real photos swapped in for placeholders (Mom Mom & Grandpop's House still open)
 - [ ] BRIEF.md, README.md, LICENSE, IMPLEMENTATION_PLAN.md all in repo
 - [ ] Commit history shows real progress over time with descriptive messages

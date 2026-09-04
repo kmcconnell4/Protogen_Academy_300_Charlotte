@@ -22,9 +22,12 @@ function DiaperScene() {
         </p>
       </div>
       <div className="scene-visual">
-        <Polaroid rotate={2} caption="candid snapshot :)">
-          [PHOTO PLACEHOLDER: diaper duty]
-        </Polaroid>
+        <Polaroid
+          rotate={2}
+          caption="diaper duty, caught on camera"
+          src="/photos/DIAPERDUTY_Diaper_Baby.MOV"
+          video
+        />
       </div>
     </Scene>
   )

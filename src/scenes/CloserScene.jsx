@@ -32,9 +32,14 @@ function CloserScene() {
         <p className="scene-copy__body">Signing off from the nursery floor, Mom, Dad, &amp; Big Simba 😊</p>
       </div>
       <div className="scene-visual">
-        <Polaroid rotate={-2} caption="Our little Big Simba 💛">
-          [PHOTO PLACEHOLDER: the closer]
-        </Polaroid>
+        <div className="photo-stack">
+          <Polaroid rotate={-2} caption="Our little Big Simba 💛">
+            [PHOTO PLACEHOLDER: the closer 1]
+          </Polaroid>
+          <Polaroid rotate={2} caption="912 days, captured 💫" className="polaroid--offset-right">
+            [PHOTO PLACEHOLDER: the closer 2]
+          </Polaroid>
+        </div>
       </div>
     </Scene>
   )

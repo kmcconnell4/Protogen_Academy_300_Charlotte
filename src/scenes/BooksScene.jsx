@@ -19,9 +19,12 @@ function BooksScene() {
         <RankedBarList items={favoriteBooks} ariaLabel="Favorite books ranked by number of reads" />
       </div>
       <div className="scene-visual">
-        <Polaroid rotate={-2} caption="candid snapshot :)">
-          [PHOTO PLACEHOLDER: reading time]
-        </Polaroid>
+        <Polaroid
+          rotate={-2}
+          caption="reading Pout-Pout Fish, live"
+          src="/photos/READING_poutpout.MOV"
+          video
+        />
         <Card className="mentions-card" shadow>
           <p className="mentions-card__title">Honorable mentions</p>
           <ul className="mentions-card__list">
