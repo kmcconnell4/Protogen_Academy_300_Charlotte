@@ -1,19 +1,22 @@
 import './App.css'
-import BigNumber from './components/BigNumber'
-import Scene from './components/Scene'
-import { storyStats } from './data/storyData'
+import BirthScene from './scenes/BirthScene'
+import BooksScene from './scenes/BooksScene'
+import CloserScene from './scenes/CloserScene'
+import DiaperScene from './scenes/DiaperScene'
+import OutingsScene from './scenes/OutingsScene'
+import SleepScene from './scenes/SleepScene'
+import WordsScene from './scenes/WordsScene'
 
 function App() {
   return (
     <main>
-      <Scene id="foundation" labelledBy="foundation-title" tone="blue">
-        <p className="foundation__date">March 8, 2024</p>
-        <h1 id="foundation-title">912 Days</h1>
-        <BigNumber {...storyStats.days} />
-        <p className="foundation__copy">
-          A story about the small numbers nobody stops to count.
-        </p>
-      </Scene>
+      <BirthScene />
+      <DiaperScene />
+      <SleepScene />
+      <BooksScene />
+      <OutingsScene />
+      <WordsScene />
+      <CloserScene />
     </main>
   )
 }

@@ -26,14 +26,14 @@ Phased build checklist for the P302 interactive data story.
 
 ## Phase 2 — Build the 7 scenes (story first, no fancy interaction yet)
 
-- [ ] Scene 1 — "912 days ago, you were born" (birth stats + Pisces constellation, `[PHOTO PLACEHOLDER]`)
-- [ ] Scene 2 — Diaper City (static big number ~7,300 + chart container)
-- [ ] Scene 3 — The sleep you didn't get (~1,200 hrs / ~50 days, crayon moon)
-- [ ] Scene 4 — The book stack (books listed, oldest-favorite at bottom, `[PHOTO PLACEHOLDER]`)
-- [ ] Scene 5 — 48 tiny expeditions (zoo/outings tally, lions + giraffes)
-- [ ] Scene 6 — The words (vocab curve 0 → ~450, `[PHOTO PLACEHOLDER]`)
-- [ ] Scene 7 — The closer (roll-up of all totals, keepsake ending, `[PHOTO PLACEHOLDER]`)
-- [ ] Verify all 7 scenes scroll cleanly end-to-end on desktop
+- [x] Scene 1 — "912 days ago, you were born" (birth stats + Pisces constellation, `[PHOTO PLACEHOLDER]`)
+- [x] Scene 2 — Diaper City (static big number ~7,300 + chart container)
+- [x] Scene 3 — The sleep you didn't get (~1,200 hrs / ~50 days, crayon moon)
+- [x] Scene 4 — The book stack (books listed, oldest-favorite at bottom, `[PHOTO PLACEHOLDER]`)
+- [x] Scene 5 — 48 tiny expeditions (zoo/outings tally, lions + giraffes)
+- [x] Scene 6 — The words (vocab curve 0 → ~450, `[PHOTO PLACEHOLDER]`)
+- [x] Scene 7 — The closer (roll-up of all totals, keepsake ending, `[PHOTO PLACEHOLDER]`)
+- [x] Verify all 7 scenes scroll cleanly end-to-end on desktop
 
 ## Phase 3 — The 3 playful interactions (the "icing")
 

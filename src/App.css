@@ -31,6 +31,33 @@
   background: var(--paper-blue);
 }
 
+.scene--yellow {
+  background: var(--paper-yellow);
+}
+
+.scene--green {
+  background: var(--paper-green);
+}
+
+.scene--orange {
+  background: #ffdbbd;
+}
+
+.scene--red {
+  background: #ef5949;
+}
+
+.scene--red .scene-copy__label,
+.scene--red h2,
+.scene--red .scene-copy__body,
+.scene--red .big-number__label {
+  color: var(--paper);
+}
+
+.scene--red .big-number__value {
+  color: var(--paper-yellow);
+}
+
 .scene__content {
   max-width: var(--content-width);
   position: relative;
@@ -38,21 +65,35 @@
   z-index: 1;
 }
 
-.foundation__date {
+.scene-copy {
+  max-width: 47rem;
+}
+
+.scene-copy__date,
+.scene-copy__label {
   color: var(--crayon-red);
   font-size: clamp(1rem, 2vw, 1.35rem);
   font-weight: 800;
   margin: 0 0 0.5rem;
 }
 
-h1 {
+h1,
+h2 {
   color: var(--ink);
   font-family: var(--display-font);
-  font-size: clamp(4.5rem, 15vw, 9rem);
   font-weight: 700;
-  line-height: 0.78;
   margin: 0;
   position: relative;
+}
+
+h1 {
+  font-size: clamp(4.25rem, 12vw, 8rem);
+  line-height: 0.8;
+}
+
+h2 {
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  line-height: 0.86;
 }
 
 h1::after {
@@ -64,6 +105,13 @@ h1::after {
   position: absolute;
   transform: rotate(-1.2deg);
   width: 86%;
+}
+
+.scene-copy__body {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  margin: 2.5rem auto 0;
+  max-width: 36rem;
 }
 
 .big-number {
@@ -101,11 +149,272 @@ h1::after {
   margin-top: 0.35rem;
 }
 
-.foundation__copy {
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
-  line-height: 1.5;
-  margin: 2.5rem auto 0;
+.birth-facts {
+  display: grid;
+  gap: 1rem;
+  margin: 2.5rem auto;
+  max-width: 37rem;
+}
+
+.birth-facts div {
+  border-bottom: 0.13rem solid var(--ink);
+  padding-bottom: 0.75rem;
+}
+
+.birth-facts dt {
+  color: var(--crayon-blue);
+  font-family: var(--display-font);
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.birth-facts dd {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.15rem 0 0;
+}
+
+.photo-placeholder {
+  align-items: center;
+  border: 0.18rem dashed var(--ink);
+  color: var(--ink);
+  display: flex;
+  font-size: 0.85rem;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 4.5rem;
+  padding: 1rem;
+}
+
+.constellation {
+  bottom: clamp(1.75rem, 5vw, 5rem);
+  fill: var(--crayon-yellow);
+  height: auto;
+  position: absolute;
+  right: clamp(1.75rem, 5vw, 5rem);
+  stroke: var(--crayon-blue);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
+  width: clamp(8rem, 18vw, 15rem);
+}
+
+.chart-frame {
+  margin: 3rem auto 0;
   max-width: 34rem;
+  position: relative;
+}
+
+.chart-frame svg {
+  display: block;
+  height: auto;
+  overflow: visible;
+  width: 100%;
+}
+
+.chart-frame__axis,
+.chart-frame__line,
+.chart-frame__flag {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart-frame__axis {
+  stroke: var(--ink);
+  stroke-width: 4;
+}
+
+.chart-frame__line {
+  stroke: var(--crayon-red);
+  stroke-width: 9;
+}
+
+.chart-frame__flag {
+  stroke: var(--crayon-green);
+  stroke-width: 5;
+}
+
+.chart-frame__top,
+.chart-frame__bottom {
+  color: var(--ink);
+  display: block;
+  font-family: var(--display-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.chart-frame__bottom {
+  color: var(--crayon-green);
+  margin-left: auto;
+  max-width: 12rem;
+  text-align: right;
+}
+
+.moon {
+  background: var(--crayon-yellow);
+  border: var(--ink-line) solid var(--ink);
+  border-radius: 50%;
+  bottom: clamp(2rem, 7vw, 6rem);
+  height: clamp(7rem, 16vw, 13rem);
+  overflow: hidden;
+  position: absolute;
+  right: clamp(2rem, 7vw, 6rem);
+  transform: rotate(-14deg);
+  width: clamp(7rem, 16vw, 13rem);
+}
+
+.moon span {
+  background: var(--paper-green);
+  border-radius: 50%;
+  height: 95%;
+  left: 34%;
+  position: absolute;
+  top: -6%;
+  width: 95%;
+}
+
+.book-stack {
+  list-style: none;
+  margin: 3rem auto;
+  max-width: 26rem;
+  padding: 0;
+}
+
+.book-stack__book {
+  align-items: center;
+  border: var(--ink-line) solid var(--ink);
+  color: var(--ink);
+  display: flex;
+  font-family: var(--display-font);
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  font-weight: 700;
+  justify-content: space-between;
+  margin: -0.18rem auto 0;
+  min-height: 3.6rem;
+  padding: 0.35rem 1rem;
+  width: 100%;
+}
+
+.book-stack__book span {
+  font-family: var(--body-font);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.book-stack__book--1 {
+  background: var(--crayon-blue);
+  transform: rotate(-0.6deg);
+}
+
+.book-stack__book--2 {
+  background: var(--crayon-yellow);
+  transform: rotate(0.75deg);
+  width: 94%;
+}
+
+.book-stack__book--3 {
+  background: var(--crayon-green);
+  transform: rotate(-0.4deg);
+  width: 89%;
+}
+
+.book-stack__book--4 {
+  background: var(--paper);
+  transform: rotate(0.5deg);
+  width: 83%;
+}
+
+.book-stack__book--5 {
+  background: var(--crayon-red);
+  color: var(--paper);
+  transform: rotate(-0.4deg);
+  width: 77%;
+}
+
+.animal-names {
+  display: flex;
+  font-family: var(--display-font);
+  font-size: clamp(2.75rem, 8vw, 5rem);
+  font-weight: 700;
+  gap: clamp(1rem, 5vw, 4rem);
+  justify-content: center;
+  margin-top: 3rem;
+  text-transform: uppercase;
+}
+
+.animal-names span:first-child {
+  color: var(--paper-yellow);
+  transform: rotate(-5deg);
+}
+
+.animal-names span:last-child {
+  color: var(--ink);
+  transform: rotate(4deg);
+}
+
+.scene--red > .photo-placeholder {
+  background: var(--paper-yellow);
+  bottom: clamp(2rem, 5vw, 5rem);
+  max-width: 20rem;
+  position: absolute;
+  right: clamp(2rem, 5vw, 5rem);
+}
+
+.word-pair {
+  display: grid;
+  gap: 0.5rem;
+  margin: 2.75rem auto 0;
+  max-width: 25rem;
+}
+
+.word-pair span {
+  border-bottom: 0.15rem solid var(--ink);
+  font-family: var(--display-font);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+}
+
+.word-pair span:first-child {
+  color: var(--crayon-orange);
+  transform: rotate(-1deg);
+}
+
+.word-pair span:last-child {
+  color: var(--crayon-green);
+  transform: rotate(1deg);
+}
+
+.word-curve {
+  fill: none;
+  margin: 2.5rem auto;
+  max-width: 32rem;
+  overflow: visible;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-width: 4;
+  width: 100%;
+}
+
+.word-curve__line {
+  stroke: var(--crayon-blue);
+  stroke-width: 9;
+}
+
+.closer-equation {
+  font-family: var(--display-font);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 3rem auto 0;
+  max-width: 44rem;
+}
+
+.scene--paper {
+  background: var(--paper);
 }
 
 @media (max-width: 34rem) {
@@ -115,5 +424,22 @@ h1::after {
 
   .big-number__value {
     -webkit-text-stroke-width: 0.07rem;
+  }
+
+  .constellation {
+    opacity: 0.65;
+  }
+
+  .moon,
+  .scene--red > .photo-placeholder {
+    position: static;
+  }
+
+  .moon {
+    margin: 2rem auto 0;
+  }
+
+  .scene--red > .photo-placeholder {
+    margin: 2rem auto 0;
   }
 }

@@ -17,6 +17,10 @@ A running record of design and build decisions. **Append a new dated entry each 
 
 ## Decisions
 
+### 2026-09-04 — Phase 2 story before interaction
+- Built all seven scenes as static scroll spreads before adding the diaper line animation, progressive book stack, or word control.
+- **Why:** the brief calls interaction "icing" and Phase 2 explicitly prioritizes an end-to-end readable story; each later interaction now has a clear, working static fallback.
+
 ### 2026-09-04 — Phase 1 crayon system & type
 - **Colors:** Use a full five-color primary crayon system (red, blue, yellow, green, orange) on a bright paper ground, with navy ink for text. The colors have distinct semantic roles rather than decorative one-off accents.
 - **Typography:** Use Gaegu for hand-lettered display moments and Nunito Sans for long-form body copy. This protects readability while keeping the headlines recognizably kid-made.
