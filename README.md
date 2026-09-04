@@ -97,6 +97,10 @@ Build for production:
 npm run build
 ```
 
+## Live site
+
+The protected production deployment is available at [912 Days on Vercel](https://protogenacademy300charlotte-om3iosn8z-kmcconnell4s-projects.vercel.app).
+
 ---
 
 ## Tech notes

@@ -17,6 +17,10 @@ A running record of design and build decisions. **Append a new dated entry each 
 
 ## Decisions
 
+### 2026-09-04 — Phase 5 production host: Vercel
+- The GitHub-connected Vercel project deployed commit `c612a4c` successfully to the protected production URL listed in the README. Unauthenticated access redirects to Vercel login.
+- The authenticated live-flow check remains open until the owner verifies the protected experience. Real photos and Scene 5's final animal visuals remain explicit brief-alignment follow-up.
+
 ### 2026-09-04 — Phase 4 motion, accessibility & placeholders
 - Added one coordinated draw-in language for scene frames, heading underlines, constellation lines, stars, and the vocabulary curve. Content remains visible before motion, and the existing reduced-motion rule collapses animation and transitions.
 - Photo markers remain explicit, friendly sketchbook frames until real Big Simba images are supplied; the final photo-swap task stays open by design.

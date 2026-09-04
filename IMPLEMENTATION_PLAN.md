@@ -52,11 +52,11 @@ Phased build checklist for the P302 interactive data story.
 
 ## Phase 5 — Deploy & finalize
 
-- [ ] Deploy to a live host (Vercel/Netlify/etc.)
-- [ ] Password-protect the deployed site (per Protogen guidance)
+- [x] Deploy to a live host (Vercel/Netlify/etc.)
+- [x] Password-protect the deployed site (per Protogen guidance)
 - [ ] Confirm live site loads and all flows work end-to-end
 - [ ] Final check: `BRIEF.md` still matches what was actually built (update if drifted)
-- [ ] Confirm README.md + LICENSE are in root and commit history reads cleanly
+- [x] Confirm README.md + LICENSE are in root and commit history reads cleanly
 
 ---
 
