@@ -37,7 +37,7 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
 | Rubric requirement | Where it's addressed |
 |---|---|
 | Site is live, accessible, password-protected | Deploy step in `IMPLEMENTATION_PLAN.md` (Phase 5) |
-| Core flows work end-to-end | All 7 scenes scroll + 3 interactions (Phases 2–3) |
+| Core flows work end-to-end | All 7 scenes scroll + 2 interactions (Phases 2–3) |
 | Build reflects the industry/user in the brief | `BRIEF.md` subject + crayon direction |
 | AI scaffolding present and organized | `BRIEF.md`, `README.md`, `IMPLEMENTATION_PLAN.md`, `/context` docs |
 | README.md and LICENSE in repo root | This file + `LICENSE` |
@@ -74,13 +74,13 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
 
 ## The 7 scenes
 
-1. **912 days ago, you were born** — birth stats + Pisces constellation
-2. **Diaper City → Potty Trained** 🚽 — *interaction: animated high→zero chart*
-3. **The sleep you didn't get** 😴 — ~1,200 hrs lost (the parent twist)
-4. **The book stack** 📚 — *interaction: books stack as you scroll*
-5. **48 tiny expeditions** 🦒 — zoo & outings tally
-6. **The words** 🗣️ — *interaction: "then → now" pronunciation slider*
-7. **The closer** 🦁 — everything rolls up to "one kid, 912 days"
+1. **912 days ago, you were born** — title slide: headline + big number + stacked Polaroid photos
+2. **Born under Pisces** — birth stats + an immersive starfield constellation moment
+3. **Diaper City → Potty Trained** 🚽 — *interaction: animated high→zero chart*
+4. **The sleep you didn't get** 😴 — ~1,200 hrs lost (the parent twist)
+5. **The book stack** 📚 — *interaction: books stack as you scroll*
+6. **48 tiny expeditions** 🦒 — Big Cat Falls + feeding the giraffes
+7. **The closer** 🦁 — staggered build-up equation, rolling up to "one kid, 912 days"
 
 ---
 
@@ -105,9 +105,9 @@ The protected production deployment is available at [912 Days on Vercel](https:/
 
 ## Tech notes
 
-- Responsive web app (scroll-based). Keep interactions light — the story is the thing, interaction is icing.
-- Primary interaction across the whole piece is **scroll progress**; the 3 named interactions are the only accents.
-- See `BRIEF.md` §8 for scope guardrails (7 scenes hard cap, 3 interactions, reuse one scene pattern).
+- Responsive web app (scroll-based, with CSS scroll-snapping so each scene locks into focus). Keep interactions light — the story is the thing, interaction is icing.
+- Primary interaction across the whole piece is **scroll progress**; the 2 named interactions are the only accents.
+- See `BRIEF.md` §8 for scope guardrails (7 scenes hard cap, 2 interactions, reuse one scene pattern).
 
 ---
 

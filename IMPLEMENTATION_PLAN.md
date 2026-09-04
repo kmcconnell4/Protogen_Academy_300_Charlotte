@@ -26,29 +26,31 @@ Phased build checklist for the P302 interactive data story.
 
 ## Phase 2 — Build the 7 scenes (story first, no fancy interaction yet)
 
-- [x] Scene 1 — "912 days ago, you were born" (birth stats + Pisces constellation, `[PHOTO PLACEHOLDER]`)
-- [x] Scene 2 — Diaper City (static big number ~7,300 + chart container)
-- [x] Scene 3 — The sleep you didn't get (~1,200 hrs / ~50 days, crayon moon)
-- [x] Scene 4 — The book stack (books listed, oldest-favorite at bottom, `[PHOTO PLACEHOLDER]`)
-- [x] Scene 5 — 48 tiny expeditions (zoo/outings tally, lions + giraffes)
-- [x] Scene 6 — The words (vocab curve 0 → ~450, `[PHOTO PLACEHOLDER]`)
-- [x] Scene 7 — The closer (roll-up of all totals, keepsake ending, `[PHOTO PLACEHOLDER]`)
+- [x] Scene 1 — "912 days ago, you were born" (title slide: headline + big number + stacked Polaroid photo placeholders)
+- [x] Scene 2 — Born under Pisces (birth stats + immersive starfield constellation moment, split out from Scene 1)
+- [x] Scene 3 — Diaper City (static big number ~7,300 + chart container)
+- [x] Scene 4 — The sleep you didn't get (~1,200 hrs / ~50 days, crayon moon)
+- [x] Scene 5 — The book stack (books listed, oldest-favorite at bottom, `[PHOTO PLACEHOLDER]`)
+- [x] Scene 6 — 48 tiny expeditions (Big Cat Falls + feeding the giraffes, `[PHOTO PLACEHOLDER]`)
+- [x] Scene 7 — The closer (staggered build-up equation, keepsake ending, `[PHOTO PLACEHOLDER]`)
 - [x] Verify all 7 scenes scroll cleanly end-to-end on desktop
+- [x] Cut the words/vocabulary scene entirely (inaccurate to how much Big Simba actually talks now) — see `context/decisions.md`
 
-## Phase 3 — The 3 playful interactions (the "icing")
+## Phase 3 — The 2 playful interactions (the "icing")
 
 - [x] **Diaper chart** — animate the hand-drawn line from "Diaper City" high → zero ("Potty trained!" flag) on scroll
-- [x] **Book stack** — books progressively stack on top of each other as you scroll (Peekaboo Feelings bottom → Grumpy Monkey → Pout-Pout Fish → Fairy Tales → Cinderella)
-- [x] **Word slider** — "then → now" toggle that morphs a word from last year's pronunciation to today's
+- [x] **Book stack** — books progressively stack on top of each other as you scroll (Peekaboo Feelings bottom/first → Grumpy Monkey → Pout-Pout Fish → Fairy Tales → Cinderella on top/last)
 - [x] Verify each interaction works and degrades gracefully if scrolled past quickly
 
 ## Phase 4 — Polish & responsiveness
 
 - [x] "Draw themselves in" motion on hand-drawn elements (wobbly, playful easing)
+- [x] Redesign the scene frame: replaced the two overlapping rotated-rectangle borders with a single hand-traced wobbly SVG outline (reused across all 7 scenes via the shared `Scene` wrapper)
+- [x] Add CSS scroll-snapping (`scroll-snap-type: y mandatory` + per-scene `scroll-snap-align`/`stop`) so scenes lock into focus on scroll instead of scrolling past like a plain list
 - [x] Responsive: verify story works on mobile / small screens (single-column scroll)
 - [x] Handle empty/edge states (e.g. photos not yet added show a friendly placeholder)
 - [x] Accessibility pass (readable contrast, alt text on drawn elements, reduced-motion fallback)
-- [ ] Swap remaining `[PHOTO PLACEHOLDER]` markers for real photos of Big Simba
+- [ ] Swap remaining `[PHOTO PLACEHOLDER]` markers for real photos of Big Simba (now 6 total, including the 3-photo title-slide stack and the giraffe-feeding photo)
 
 ## Phase 5 — Deploy & finalize
 
@@ -64,7 +66,7 @@ Phased build checklist for the P302 interactive data story.
 
 - [ ] Live, password-protected, accessible site
 - [ ] All 7 scenes scroll end-to-end
-- [ ] All 3 playful interactions working
+- [ ] Both playful interactions working
 - [ ] Crayon aesthetic evident and intentional
 - [ ] Real photos swapped in for placeholders
 - [ ] BRIEF.md, README.md, LICENSE, IMPLEMENTATION_PLAN.md all in repo

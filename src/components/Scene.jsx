@@ -54,6 +54,14 @@ function Scene({ children, className = '', id, labelledBy, tone = 'paper' }) {
       data-visible={progress > 0.15}
       style={{ '--scene-progress': progress }}
     >
+      <svg className="scene-frame" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path
+          className="scene-frame__path"
+          d="M 8,10 C 25,4 55,14 92,7 C 97,25 90,55 96,92 C 75,97 40,90 9,95 C 4,70 11,38 8,10 Z"
+          pathLength="1"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
       <div className="scene__content">{children}</div>
     </section>
   )

@@ -5,17 +5,17 @@ import CloserScene from './scenes/CloserScene'
 import DiaperScene from './scenes/DiaperScene'
 import OutingsScene from './scenes/OutingsScene'
 import SleepScene from './scenes/SleepScene'
-import WordsScene from './scenes/WordsScene'
+import StarSignScene from './scenes/StarSignScene'
 
 function App() {
   return (
     <main>
       <BirthScene />
+      <StarSignScene />
       <DiaperScene />
       <SleepScene />
       <BooksScene />
       <OutingsScene />
-      <WordsScene />
       <CloserScene />
     </main>
   )

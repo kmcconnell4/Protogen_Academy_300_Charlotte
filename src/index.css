@@ -9,6 +9,7 @@ html {
   color: var(--ink);
   font-family: var(--body-font);
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {

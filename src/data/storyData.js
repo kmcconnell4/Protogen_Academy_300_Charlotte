@@ -4,7 +4,6 @@ export const storyStats = {
   sleep: { value: '~1,200', label: 'hours of parent sleep lost', detail: 'About 50 full days.' },
   books: { value: '~340', label: 'books read', detail: 'Peekaboo Feelings: about 200 times.' },
   expeditions: { value: '~48', label: 'tiny expeditions', detail: 'About two trips a month since six months old.' },
-  words: { value: '0 to ~450', label: 'words known', detail: 'A vocabulary explosion in progress.' },
   naps: { value: '~1,500', label: 'naps taken' },
   carried: { value: '~250', label: 'miles carried', detail: 'A marathon about every five weeks.' },
   questions: { value: '~350', label: 'why?s per day', detail: 'About one every two waking minutes.' },
@@ -24,4 +23,7 @@ export const favoriteBooks = [
   'Cinderella',
 ]
 
-export const wordPair = { then: 'aminal', now: 'animal' }
+export const favoriteOutings = {
+  exhibit: 'Big Cat Falls',
+  giraffeFeedings: 6,
+}

@@ -47,15 +47,18 @@ Written for **other parents** (who will feel deeply seen) and **non-parent frien
 A **scrollytelling** narrative. Each scene reveals one surprising cumulative stat with a hand-drawn element that animates in as you scroll. Interaction is the icing; the story is the thing.
 
 ### Scene 1 — "912 days ago, you were born."
-The opening. Birth stats hand-lettered like a nursery wall. A crayon Pisces constellation draws itself in. Light joke about astrology → sets the funny-but-warm tone.
+The cover slide. Headline + the 912-day big number, plus a stacked pile of Polaroid-style photo placeholders. Kept deliberately clean — no birth date or facts here, just the title moment.
 
-### Scene 2 — Diaper City → Potty Trained 🚽 *(playful moment #1)*
+### Scene 2 — Born under Pisces
+The immersive birth-stats moment, split out from the opening so it can breathe: birth date, "tiny but mighty" stats, and the star sign as the visual centerpiece — a deep night-blue starfield background with a crayon Pisces constellation drawing itself in slowly. Light joke about astrology → sets the funny-but-warm tone. *(A full birth chart — all planets/houses — was considered and deferred; see `context/decisions.md`.)*
+
+### Scene 3 — Diaper City → Potty Trained 🚽 *(playful moment #1)*
 The big number: **~7,300 diapers**. A hand-drawn chart shows the daily diaper count starting sky-high ("Diaper City") and tapering to a triumphant zero — the "officially potty trained" flag planted at the end. Framed as *"one diaper roughly every 3 hours, nonstop, for 2.5 years."*
 
-### Scene 3 — The sleep you didn't get 😴
+### Scene 4 — The sleep you didn't get 😴
 The parent-perspective twist. Cumulative hours of *your* lost sleep, drawn as a crayon moon that fills in. The one scene that's about the grown-ups — reframes the "cute" data as real labor.
 
-### Scene 4 — The book stack 📚 *(playful moment #2)*
+### Scene 5 — The book stack 📚 *(playful moment #2)*
 As you scroll, favorite books **physically stack on top of each other**, oldest-favorite at the bottom:
 1. *Peekaboo Feelings* (the OG — read an estimated **200 times**)
 2. *Grumpy Monkey*
@@ -65,26 +68,24 @@ As you scroll, favorite books **physically stack on top of each other**, oldest-
 
 Big number: **~340 books read**, with a callout for the one read 200 times. *(Other faves — Jamberry, Green Eggs and Ham, Lion King — can join the stack or live in a "the whole shelf" moment.)*
 
-### Scene 5 — 48 tiny expeditions 🦒
-Zoo & outings: **~2 trips a month since she was 6 months old = ~48 trips.** Hand-drawn lions and giraffes. A running tally of "favorite animal spotted." Playful, visual, breezy — a palate cleanser before the emotional scenes.
-
-### Scene 6 — The words 🗣️ *(playful moment #3)*
-The one "real trend" moment: the vocabulary explosion. A **slider/toggle that morphs a word from "then" → "now"** — showing how she used to pronounce it a year ago vs. how she says it now. (e.g., toddler-speak → real word.) Underneath, a squiggly crayon curve of "words known over time" hockey-sticking upward.
+### Scene 6 — 48 tiny expeditions 🦒
+Zoo & outings: **~2 trips a month since she was 6 months old = ~48 trips.** Big Cat Falls is the automatic first stop; feeding the giraffes is a close second (about 6 times and counting — real photos to come). Hand-drawn lions and giraffes. Playful, visual, breezy — a palate cleanser before the emotional close.
 
 ### Scene 7 — The closer 🦁
-Everything rolls up: *7,300 diapers + 340 books + 48 expeditions + a thousand mispronounced words = one kid, 912 days, and it went by in a blink.* Ends on the keepsake note — warm, a little devastating, entirely earned.
+The equation builds one term at a time as the scene comes into view — *7,300 diapers, then + 340 books, + 48 expeditions, + a thousand mispronounced words* — each in its own crayon color, before landing on the payoff: **"One kid. 912 days."** Ends on the keepsake note — warm, a little devastating, entirely earned.
 
 ---
 
-## 5. The three playful interactions (kept intentionally light)
+## 5. The two playful interactions (kept intentionally light)
 
 | # | Scene | Interaction | Why it stays finishable |
 |---|---|---|---|
 | 1 | Diapers | Animated hand-drawn chart: high → zero ("potty trained!") | Triggered on scroll, no complex state |
 | 2 | Books | Books stack progressively as you scroll | Sequential reveal, pure CSS/scroll animation |
-| 3 | Words | "Then → Now" pronunciation slider/toggle | Single toggle, small dataset |
 
-Primary interaction across the whole piece = **scroll progress**. Everything else is a light accent so the build stays fast.
+*(A third interaction — a "then → now" word-pronunciation toggle — was cut along with its scene; see `context/decisions.md`. Interaction is icing, not the point, so 2 is fine.)*
+
+Primary interaction across the whole piece = **scroll progress**, reinforced by scroll-snapping so each scene locks into focus rather than scrolling past like a plain list. Everything else is a light accent so the build stays fast.
 
 ---
 
@@ -101,7 +102,6 @@ All figures are believable estimates, not real logs — per the P302 brief, the 
 | Zoo / outings | ~48 | 2/month since 6 months old |
 | Parent sleep lost | **~1,200 hours (~50 full days)** | Yr 1: ~2 hrs/night lost × 365 ≈ 730; Yr 2: ~0.75 hrs × 365 ≈ 275; last 6 mo: ~0.3 hrs × 182 ≈ 55; + illness/teething buffer ≈ 1,200 |
 | Naps taken | **~1,500** | ~4/day as newborn → 2/day → 1/day, tapering across 912 days |
-| Words known | **0 → ~450** | Typical: ~50 words at 18 mo, explosion to ~300+ by age 2, ~450 by 2.5 |
 | Miles carried | **~250 miles** | ~0.25 mi/day carried/worn, avg across 912 days (~a marathon every ~5 weeks) |
 | "Why?" / questions per day | **~350/day** | Peak toddler-talk comedic stat (~one every ~2 waking minutes) |
 
@@ -113,19 +113,19 @@ All figures are believable estimates, not real logs — per the P302 brief, the 
 
 For the "does it look right?" dimension: the medium matches the subject. A polished corporate chart would fight the story; a childlike sketchbook feel makes it feel drawn *by* and *for* a toddler.
 
-- **Aesthetic:** Sketchbook / crayon. Imperfect, slightly wobbly hand-drawn lines. Paper or construction-paper texture background.
-- **Palette:** **Bold primary crayon** — gleeful chaos, but curated to ~5 core colors (crayon red, blue, yellow, green, orange) so it reads intentional, not like the whole 64-box.
+- **Aesthetic:** Sketchbook / crayon. Imperfect, slightly wobbly hand-drawn lines. Paper or construction-paper texture background. Every scene is framed by a single hand-traced wobbly outline (one imperfect line, not a crisp geometric border) that draws itself in on scroll.
+- **Palette:** **Bold primary crayon** — gleeful chaos, but curated to ~5 core colors (crayon red, blue, yellow, green, orange) plus a deep night-blue + starfield for the star-sign scene, so it reads intentional, not like the whole 64-box.
 - **Type:** Hand-lettered / crayon display font for headlines + a clean, highly readable body font (legibility over gimmick).
 - **Motion:** Elements "draw themselves" in on scroll. Slightly wobbly, playful easing. Nothing snappy or corporate.
 - **Charts:** Hand-drawn style — squiggly axes, crayon-filled bars, hand-sketched icons (lions, giraffes, moons, books).
-- **Photos:** `[PHOTO PLACEHOLDER]` markers left throughout — real photos of Big Simba to be dropped in (birth, book stack, zoo, then/now word scene, closer).
+- **Photos:** `[PHOTO PLACEHOLDER]` markers left throughout — real photos of Big Simba to be dropped in (a stacked Polaroid-style trio on the title scene, plus book stack, feeding the giraffes, and closer).
 
 ---
 
 ## 8. Scope guardrails (to finish ASAP)
 
-- **7 scenes, hard cap.** No scene creep.
-- **3 interactions, as specified.** Everything else is scroll-only.
+- **7 scenes, hard cap.** The opening was split into a title slide and an immersive birth-stats/star-sign scene (a cover moment and an immersive one are two different emotional beats), and the vocabulary/words scene was cut entirely as inaccurate to how much Big Simba actually talks now — net still 7. No further scene creep beyond this.
+- **2 interactions, as specified.** Everything else is scroll-only (plus scroll-snapping, so each scene locks into view rather than scrolling past).
 - **Reuse a single component pattern** for each scene (a scene wrapper + a "big number" reveal) rather than bespoke builds per scene.
 - **Placeholders over perfection** for photos and bracketed stats — fill last.
 - Deploy early, then polish. Password-protect the site per Protogen guidance.
@@ -136,7 +136,7 @@ For the "does it look right?" dimension: the medium matches the subject. A polis
 
 - [ ] Live, password-protected, accessible site
 - [ ] All 7 scenes scroll end-to-end
-- [ ] 3 playful interactions working (diaper chart, book stack, word slider)
+- [ ] 2 playful interactions working (diaper chart, book stack)
 - [ ] Crayon aesthetic evident and intentional
 - [ ] Photo placeholders swapped for real images
 - [ ] BRIEF.md in repo root, matching the build
