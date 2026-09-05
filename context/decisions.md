@@ -17,6 +17,9 @@ A running record of design and build decisions. **Append a new dated entry each 
 
 ## Decisions
 
+### 2026-09-05 — Removed stale `PRODUCT.md`
+- **Deleted `PRODUCT.md`**, a leftover `.impeccable` design-skill scaffolding file from early in the project. It was redundant with `BRIEF.md` (which covers purpose, audience, positioning, and principles more thoroughly) and, worse, actively stale: it still described the pre-pivot crayon/hand-drawn aesthetic, referenced the since-cut Sleep and Vocabulary scenes, referenced a 3rd interaction (a word-pronunciation toggle) that was cut along with its scene, and claimed no production photos existed yet. It was never referenced from README/IMPLEMENTATION_PLAN and had drifted out of the doc-sync loop this project otherwise keeps tight — a stale contradictory doc in repo root works against the rubric's "context docs actually match what you built" criterion more than having no such doc at all.
+
 ### 2026-09-05 — Smaller polaroids on the title and closer scenes
 - **Shrank the stacked polaroids on Scene 1 (born) and the closer scene** — both use `.photo-stack` with two overlapping polaroids, and the photos (real content now, not placeholders) were rendering close to the 26rem cap, making those two scenes noticeably taller than one viewport and pushing content past the fold. Scoped new rules to `.photo-stack .polaroid`/`.polaroid__photo`/`.polaroid__media` (max-width/max-height down to 18rem, min-height down to 10rem) rather than touching the base `.polaroid` rules, so the single-photo scenes (diapers, books) and the outings modal's photos are untouched. Verified live: the stacked pair is noticeably more compact on both desktop and mobile, no layout regressions.
 
