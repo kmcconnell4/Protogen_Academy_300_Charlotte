@@ -89,7 +89,8 @@ function MilestoneTimeline({ milestones }) {
               </div>
             ) : (
               <p className="milestone-timeline__card" aria-hidden="true">
-                <span className="milestone-timeline__age">{milestone.ageLabel}</span> — {milestone.title}
+                <span className="milestone-timeline__age">{milestone.ageLabel}</span>
+                <span className="milestone-timeline__card-title">{milestone.title}</span>
               </p>
             )}
           </li>
