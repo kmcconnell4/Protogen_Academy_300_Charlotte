@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Polaroid from '../components/Polaroid'
 import Scene from '../components/Scene'
 import StarChartModal from '../components/StarChartModal'
-import { birthDetails } from '../data/storyData'
+import { birthDetails, getDaysSinceBirth } from '../data/storyData'
 
 function BirthScene() {
   const [isChartOpen, setIsChartOpen] = useState(false)
@@ -10,7 +10,7 @@ function BirthScene() {
   return (
     <Scene id="born" labelledBy="born-title" tone="paper">
       <div className="scene-copy">
-        <h1 id="born-title">912 days ago, you were born.</h1>
+        <h1 id="born-title">{getDaysSinceBirth()} days ago, you were born.</h1>
         <p className="scene-copy__body">
           Life went from &ldquo;quiet &amp; organized&rdquo; to absolute chaotic magic.
         </p>

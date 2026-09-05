@@ -8,8 +8,14 @@ function DiaperScene() {
   return (
     <Scene id="diapers" labelledBy="diapers-title" tone="green">
       <div className="scene-copy">
-        <p className="scene-copy__label">Phase 01: Welcome to Diaper City</p>
-        <h2 id="diapers-title">The supplies. The laundry. The diapers.</h2>
+        <p className="scene-copy__label">Phase 02: Welcome to Diaper City</p>
+        <h2 id="diapers-title">
+          The supplies.
+          <br />
+          The laundry.
+          <br />
+          The diapers.
+        </h2>
         <BigNumber variant="inline" accent="var(--crayon-red)" value={storyStats.diapers.value} label="diapers changed." />
         <p className="scene-copy__body">One roughly every 3 hours. Nonstop. Night and day. For 2.5 long years.</p>
         <BarChart

@@ -43,18 +43,21 @@ Written for **other parents** (who will feel deeply seen) and **non-parent frien
 
 ---
 
-## 4. The structure — 5 scenes (scroll-driven) + 1 modal Easter egg
+## 4. The structure — 6 scenes (scroll-driven) + 1 modal Easter egg
 
 A **scrollytelling** narrative. Each scene reveals one surprising cumulative stat with a bold, cartoony element that animates in as you scroll. Interaction is the icing; the story is the thing.
 
 ### Scene 1 — "912 days ago, you were born."
 The cover slide. Headline, the birth date and a short narrative blurb, a 3-segment stat pill (date of arrival / weight / length), and the 912-day big number — plus a single Polaroid-style photo placeholder. The date-of-arrival segment carries a small clickable Pisces icon that opens the star-chart Easter egg (see below).
 
-### Scene 2 — Diaper City → Potty Trained 🚽 *(interaction #1)*
-Eyebrow "Phase 01: Welcome to Diaper City." The big number: **~7,300 diapers**. A literal bar chart shows the daily diaper rate across 5 periods (Mo 1–3 → Today), tapering to zero with an "Officially potty trained!" flag on the final bar. A speech-bubble quote ("Send help...") adds a comedic aside.
+### Scene 2 — The growing 📈
+Eyebrow "Phase 01: The Growing." Headline "You've grown a ton." (styled like every other scene's headline, not the oversized title-scene font) pairs with an inline stat line ("15.5 inches **taller.**"). A height chart plots 10 real pediatric check-ins from birth to 24 months; hovering or focusing any point reveals that visit's exact age, length, and percentile. A sidebar of stat cards covers current weight vs. birth weight, shoe size then→now, wardrobe size then→now, and height percentile. No photo on this scene — a deliberate deviation from the one-photo-per-scene pattern, since the chart itself is the visual. Given its own distinct background tone so it doesn't read as a continuation of the title scene right before it.
 
-### Scene 3 — The book stack 📚 *(interaction #2)*
-Eyebrow "Phase 02: Repetitive literary genius." Favorite books render as a horizontal ranked-bar list, widest/bottom = most read:
+### Scene 3 — Diaper City → Potty Trained 🚽 *(interaction #1)*
+Eyebrow "Phase 02: Welcome to Diaper City." The big number: **~7,300 diapers**. A literal bar chart shows the daily diaper rate across 5 periods (Mo 1–3 → Today), tapering to zero with an "Officially potty trained!" flag on the final bar. A speech-bubble quote ("Send help...") adds a comedic aside.
+
+### Scene 4 — The book stack 📚 *(interaction #2)*
+Eyebrow "Phase 03: Repetitive literary genius." Favorite books render as a horizontal ranked-bar list, widest/bottom = most read:
 1. *Peekaboo Feelings* — ~200 reads (the OG favorite)
 2. *Grumpy Monkey* — ~60 reads
 3. *The Pout-Pout Fish* — ~45 reads
@@ -63,14 +66,14 @@ Eyebrow "Phase 02: Repetitive literary genius." Favorite books render as a horiz
 
 Big number: **~340 books read**. An "Honorable Mentions" card lists the wider rotating shelf (Jamberry, Green Eggs and Ham, The Lion King).
 
-### Scene 4 — The adventure map 🗺️
-Eyebrow "Phase 03: Adventures galore." Headline "We've been on so many adventures." — a large, cartoony illustrated map (hand-drawn SVG: landmass, river, a dashed road connecting the stops) with 5 pins for real places: Philadelphia Zoo, Adventure Aquarium, Please Touch Museum, Mom Mom and Grandpop's House (Newtown, PA), and PG & Pappy's House (Beach Lake, PA). Tapping a pin opens an accessible pop-up with a short story and photos from that place. The Philadelphia Zoo pin carries what used to be this scene's whole body: the "~48 tiny expeditions" stat, Big Cat Falls/giraffe-feeding copy, and the "Favorite Animal Spotted" tally card (lions ×17, giraffes ×12, penguins ×7) — folded in rather than dropped when the scene became map-driven. The pin/pop-up pattern is this scene's core content-delivery mechanism (like scroll-snap is for the whole site), not counted as a 3rd interaction — see §5.
+### Scene 5 — The adventure map 🗺️
+Eyebrow "Phase 04: Adventures galore." Headline "We've been on so many adventures." — a large, cartoony illustrated map (hand-drawn SVG: landmass, river, a dashed road connecting the stops) with 5 pins for real places: Philadelphia Zoo, Adventure Aquarium, Please Touch Museum, Mom Mom and Grandpop's House (Newtown, PA), and PG & Pappy's House (Beach Lake, PA). Tapping a pin opens an accessible pop-up with a short story and photos from that place. The Philadelphia Zoo pin carries what used to be this scene's whole body: the "~48 tiny expeditions" stat and Big Cat Falls/giraffe-feeding copy, folded in rather than dropped when the scene became map-driven. (The zoo pop-up's animal-sighting tally card was cut for feeling out of place next to the story/photos — see `context/decisions.md`.) The pin/pop-up pattern is this scene's core content-delivery mechanism (like scroll-snap is for the whole site), not counted as a 3rd interaction — see §5.
 
-### Scene 5 — The closer 🦁
+### Scene 6 — The closer 🦁
 Eyebrow "★ The heartwarming end (for now)." A recap card — "Let's wrap up the adventure so far..." — rolls up diapers, books, and expeditions (each with a one-line callback) plus a final "1 incredible little kid" row, landing on **"912 days of wonder."**
 
 ### Easter egg — Written in the Stars (modal)
-Clicking the Pisces icon on the title scene opens an accessible modal overlay: "Interlude: Star Chart," with 3 placement cards (Sun/Pisces, Rising/Leo, Moon/Aquarius), each with a hand-drawn constellation, degree/house notation, and a short personality blurb. Closable via Escape, click-outside, or the close button; focus is trapped while open and restored to the trigger on close. This is explicitly a bonus, not one of the 5 scroll scenes or 2 named interactions.
+Clicking the Pisces icon on the title scene opens an accessible modal overlay: "Star Chart," with 3 placement cards (Sun/Pisces, Rising/Leo, Moon/Aquarius), each with a hand-drawn constellation, degree/house notation, and a short personality blurb. Closable via Escape, click-outside, or the close button; focus is trapped while open and restored to the trigger on close. This is explicitly a bonus, not one of the 6 scroll scenes or 2 named interactions.
 
 ---
 
@@ -108,6 +111,8 @@ All figures are believable estimates, not real logs — per the P302 brief, the 
 
 The adventure map's 5 locations are real places, not invented data — each carries real photos and a short story rather than an estimated stat. Photos were matched to locations by filename/content, with confidence levels logged in `context/decisions.md`; Mom Mom and Grandpop's House has none yet.
 
+The Growth scene's chart and sidebar figures are a different category from the rest of this section: they're **real logged measurements from Charlotte's pediatric growth tracker** (10 height check-ins from birth through 24 months, each with its own age, length, and percentile), not invented-but-plausible like the diaper/nap/question stats above. Clicking or focusing a point on the chart reveals that visit's exact age, length, and percentile.
+
 ---
 
 ## 7. Visual direction — flat, bold & cartoony
@@ -117,16 +122,16 @@ For the "does it look right?" dimension: bold flat color blocks, hard-edged cart
 - **Aesthetic:** Flat and cartoony. Rounded cards with thin ink borders and a hard, non-blurred offset drop shadow (no soft/blurred shadows) — used consistently on Polaroids, stat pills, quote bubbles, and recap cards. No decorative hand-drawn frame around scenes; clean flat color backgrounds instead.
 - **Palette:** The same 5 core crayon hues (red, blue, yellow, green, orange) carried over from the original direction, but used as flat solid fills/borders rather than hand-drawn strokes — plus a deep night-navy + starfield reserved for the star-chart modal.
 - **Type:** One typeface throughout — Nunito Sans — with headlines set heavy-weight, uppercase, and tight-tracking for a bold flat-grotesk feel; body copy stays regular-weight for readability.
-- **Layout:** Left-aligned two-column scenes (copy left, photo/visual right on desktop, stacking to one column on mobile), with a persistent sticky header ("● 912 DAYS / Scroll to read our story ↓") and phase-numbered eyebrow labels ("Phase 01: Welcome to Diaper City," etc.).
+- **Layout:** Left-aligned two-column scenes (copy left, photo/visual right on desktop, stacking to one column on mobile), with a persistent sticky header ("● 912 DAYS / Scroll to read our story ↓") and phase-numbered eyebrow labels ("Phase 01: Welcome to Diaper City," etc.). The book scene flips this (video left, copy right) as a deliberate one-off variation.
 - **Motion:** Bars and ranked lists animate in with a clean, snappy easing on scroll (no wobble). The one deliberate exception is the star-chart modal's constellation SVGs, which keep their original hand-drawn draw-in animation as a framed "interlude" accent, distinct from the rest of the flat system.
-- **Charts:** Literal and legible — an axis-labeled bar chart for diapers, a horizontal ranked-bar list for books, an icon-tally card for animal sightings.
-- **Photos:** `[PHOTO PLACEHOLDER]` markers left throughout, styled as flat-shadow Polaroids with a small tape accent — one on the title scene, one on diapers, one on books, two (stacked) on outings, one on the closer.
+- **Charts:** Literal and legible — a hover-to-inspect bar chart for diapers, a horizontal ranked-bar list for books, a hover-to-inspect height chart for growth.
+- **Photos:** `[PHOTO PLACEHOLDER]` markers left throughout, styled as flat-shadow Polaroids with a small tape accent — one on the title scene, one on diapers, one on books, two (stacked) on outings, one on the closer. The Growth scene is the one deliberate exception: no photo, since its chart carries the scene visually.
 
 ---
 
 ## 8. Scope guardrails (to finish ASAP)
 
-- **5 scroll scenes + 1 modal Easter egg, hard cap.** History: started at 7 → split the opening into two (8) → cut the words/vocabulary scene (back to 7) → cut the Sleep scene entirely and moved the star-sign content out of the scroll flow into a click-triggered modal (5 scroll scenes + 1 Easter egg). Each change is logged with its reasoning in `context/decisions.md` — this is intentional iteration, not drift. No further scene creep beyond this.
+- **6 scroll scenes + 1 modal Easter egg, hard cap.** History: started at 7 → split the opening into two (8) → cut the words/vocabulary scene (back to 7) → cut the Sleep scene entirely and moved the star-sign content out of the scroll flow into a click-triggered modal (5 scroll scenes + 1 Easter egg) → added a Growth scene as the new Phase 01 (6 scroll scenes + 1 Easter egg). Each change is logged with its reasoning in `context/decisions.md` — this is intentional iteration, not drift. No further scene creep beyond this.
 - **2 interactions, as specified.** Everything else is scroll-only (plus scroll-snapping, so each scene locks into view rather than scrolling past). The star-chart modal is a bonus Easter egg, not a 3rd interaction.
 - **Reuse a single component pattern** for each scene (a scene wrapper + a "big number" reveal) rather than bespoke builds per scene.
 - **Placeholders over perfection** for photos and bracketed stats — fill last.
@@ -137,7 +142,7 @@ For the "does it look right?" dimension: bold flat color blocks, hard-edged cart
 ## 9. What "done" looks like
 
 - [ ] Live, password-protected, accessible site
-- [ ] All 5 scenes scroll end-to-end, plus the star-chart modal opens/closes accessibly
+- [ ] All 6 scenes scroll end-to-end, plus the star-chart modal opens/closes accessibly
 - [ ] 2 playful interactions working (diaper chart, book stack)
 - [ ] Flat/cartoony aesthetic evident and intentional
 - [ ] Photo placeholders swapped for real images

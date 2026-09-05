@@ -11,12 +11,43 @@ export const birthDetails = {
   born: 'March 8, 2024, 2:40 PM',
   date: 'March 8, 2024',
   time: '2:40 PM',
+  bornISO: '2024-03-08T14:40:00',
   stats: '6 lbs 0 oz, 19.5 in long',
   weight: '6 lbs 0 oz',
   length: '19.5 in',
   sign: 'Pisces',
   realName: 'Charlotte',
   nickname: 'Big Simba',
+}
+
+export function getDaysSinceBirth() {
+  return Math.floor((Date.now() - new Date(birthDetails.bornISO).getTime()) / 86400000)
+}
+
+// Real logged measurements (pediatrician growth-tracker export) — not estimated.
+export const growthChart = [
+  { months: 0, label: 'Birth', date: 'Mar 8, 2024', charlotte: 19.5, percentile: 53.4 },
+  { months: 0.1, label: '0.1mo', date: 'Mar 11, 2024', charlotte: 19.3, percentile: 37.7 },
+  { months: 1.1, label: '1.1mo', date: 'Apr 11, 2024', charlotte: 21.3, percentile: 51.6 },
+  { months: 2, label: '2mo', date: 'May 9, 2024', charlotte: 22.2, percentile: 45.1 },
+  { months: 4, label: '4mo', date: 'Jul 9, 2024', charlotte: 25, percentile: 78 },
+  { months: 9.1, label: '9.1mo', date: 'Dec 10, 2024', charlotte: 28.3, percentile: 76.5 },
+  { months: 12.1, label: '12.1mo', date: 'Mar 11, 2025', charlotte: 30.5, percentile: 89.5 },
+  { months: 15.1, label: '15.1mo', date: 'Jun 10, 2025', charlotte: 30.9, percentile: 65.3 },
+  { months: 22.7, label: '22.7mo', date: 'Jan 27, 2026', charlotte: 34, percentile: 69.7 },
+  { months: 24, label: '24mo', date: 'Mar 10, 2026', charlotte: 35, percentile: 81.9 },
+]
+
+export const growthStats = {
+  weightThen: birthDetails.weight,
+  weightThenValue: 6,
+  weightNow: '29 lbs',
+  weightNowValue: 29,
+  heightThenValue: 19.5,
+  heightNowValue: 35,
+  heightPercentile: 82,
+  shoeSize: { then: 'Newborn', now: 'Toddler 7' },
+  wardrobe: { then: 'Newborn', now: '3T' },
 }
 
 export const favoriteBooks = [
@@ -27,18 +58,10 @@ export const favoriteBooks = [
   { title: 'Cinderella', reads: 10, color: 'var(--crayon-red)' },
 ]
 
-export const honorableMentionBooks = ['Jamberry', 'Green Eggs and Ham', 'The Lion King']
-
 export const favoriteOutings = {
   exhibit: 'Big Cat Falls',
   giraffeFeedings: 6,
 }
-
-export const animalTally = [
-  { animal: 'The majestic lion (Simba!)', count: 17, icon: '🦁' },
-  { animal: 'Super tall giraffes', count: 12, icon: '🦒' },
-  { animal: 'Waddling penguins', count: 7, icon: '🐧' },
-]
 
 export const locations = [
   {
@@ -49,6 +72,11 @@ export const locations = [
     x: 18,
     y: 64,
     tagline: 'Please Touch Museum',
+    place: 'Philadelphia, PA',
+    hoverStats: [
+      { value: 5, label: 'visits' },
+      { value: 2, label: 'illnesses contracted' },
+    ],
     story: 'Carousel rides, a tractor to "drive," and a whole museum built for little hands to explore.',
     photos: [
       { src: '/photos/PleaseTouch1.jpeg', alt: 'Charlotte and a family member riding a carousel horse together' },
@@ -66,8 +94,12 @@ export const locations = [
     x: 40,
     y: 76,
     tagline: 'The Zoo',
+    place: 'Philadelphia, PA',
+    hoverStats: [
+      { value: 15, label: 'visits' },
+      { value: favoriteOutings.giraffeFeedings, label: 'giraffes fed' },
+    ],
     story: `${favoriteOutings.exhibit} is the automatic first stop, feeding the giraffes a close second (about ${favoriteOutings.giraffeFeedings} times and counting) — one stop on ${storyStats.expeditions.value} tiny expeditions and counting. Every single animal we saw was officially named "Big Simba" or "Baby Simba."`,
-    tally: animalTally,
     photos: [
       { src: '/photos/ZOO_Giraffes_1.jpeg', alt: 'Charlotte, held by a family member, reaching out to feed a giraffe' },
       { src: '/photos/ZOO_Giraffes_2.jpeg', alt: 'Charlotte, held by her dad, feeding a giraffe leaves through a fence' },
@@ -86,6 +118,11 @@ export const locations = [
     x: 64,
     y: 84,
     tagline: 'The Aquarium',
+    place: 'Camden, NJ',
+    hoverStats: [
+      { value: 9, label: 'visits' },
+      { value: 3, label: 'stingrays petted' },
+    ],
     story: 'Face-to-face with sea turtles, seals, and hippos — a whole ocean (and then some) without getting wet.',
     photos: [
       { src: '/photos/Aquarium.jpeg', alt: 'Charlotte at Adventure Aquarium' },
@@ -102,6 +139,11 @@ export const locations = [
     x: 58,
     y: 42,
     tagline: "Mom Mom's House",
+    place: 'Newtown, PA',
+    hoverStats: [
+      { value: 10, label: 'visits' },
+      { value: 'Too many', label: 'Christmas presents opened' },
+    ],
     story: 'Holidays are always a little louder — and a little better — at Mom Mom and Grandpop\'s.',
     photos: [
       { src: '/photos/MomMom_Christmas.jpeg', alt: "Charlotte in a green dress by the Christmas tree at Mom Mom's" },
@@ -117,6 +159,11 @@ export const locations = [
     x: 70,
     y: 12,
     tagline: "PG's House",
+    place: 'Beach Lake, PA',
+    hoverStats: [
+      { value: 6, label: 'visits' },
+      { value: 1, label: 'baby goat petted' },
+    ],
     story: 'Lake days and baby goats — the whole point of a trip up to Beach Lake.',
     photos: [
       { src: '/photos/PGs_Dad_Lake.jpeg', alt: "Charlotte and her dad by the lake at PG and Pappy's house" },

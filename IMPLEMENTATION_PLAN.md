@@ -50,7 +50,7 @@ Phased build checklist for the P302 interactive data story.
 - [x] Responsive: verify story works on mobile / small screens (single-column scroll)
 - [x] Handle empty/edge states (e.g. photos not yet added show a friendly placeholder)
 - [x] Accessibility pass (readable contrast, alt text on drawn elements, reduced-motion fallback)
-- [x] Swap most `[PHOTO PLACEHOLDER]` markers for real photos/videos: birth (2), diaper duty (video), reading time (video), feeding the giraffes (2) — 6 of 8 done. The closer scene's 2 placeholders are still open; no file was renamed to match them yet.
+- [x] Swap all `[PHOTO PLACEHOLDER]` markers for real photos/videos: birth (2), diaper duty (video), reading time (video), feeding the giraffes (2), closer (2) — every placeholder on the site now shows real content.
 
 ## Phase 5 — Deploy & finalize
 
@@ -83,7 +83,7 @@ The outings scene became a large illustrated map with 5 clickable pins (Philadel
 
 - [x] Add `locations` dataset to `storyData.js`, folding in `favoriteOutings`/`animalTally`/`storyStats.expeditions` for the zoo entry
 - [x] Build `AdventureMap.jsx` (hand-drawn SVG landmass/river/road + data-driven pin buttons)
-- [x] Build `LocationModal.jsx` (reuses `Modal.jsx`) + `PhotoGrid.jsx`
+- [x] Build `LocationModal.jsx` (reuses `Modal.jsx`) + `PhotoCarousel.jsx` (swipeable, 3-at-a-time, replaced the original static `PhotoGrid.jsx`)
 - [x] Rewrite `OutingsScene.jsx`: new headline, full-width map, removed old TallyTable/photo-stack usage
 - [x] Add `#outings .scene__content` layout override + map/pin/modal CSS to `App.css`
 - [x] Verify all 5 pins render, open correct pop-up content, zoo pin shows folded-in content correctly
@@ -91,16 +91,39 @@ The outings scene became a large illustrated map with 5 clickable pins (Philadel
 - [x] Keyboard accessibility pass (pin tab order, modal focus trap/restore, Escape) — verified
 - [x] Responsive check at mobile width — fixed overlapping pin tags by respacing the southern 3-pin cluster
 - [x] `npm run lint` and `npm run build` clean
-- [ ] Owner to confirm/replace confidence-flagged photo guesses (see `context/decisions.md`) and supply photos for Mom Mom & Grandpop's House
+- [x] Mom Mom & Grandpop's House photos added (`MomMom_Christmas/Thanksgiving/easter.jpeg`) — all 5 locations now have real photos
+- [ ] Owner to confirm/replace remaining confidence-flagged photo guesses (see `context/decisions.md`)
+
+## Phase 8 — Growth scene (new Phase 01) + smaller fixes
+
+A new "Growth" scene lands right after the title scene, showing Charlotte's real height growth (10 logged pediatric check-ins) via a hover-to-inspect chart + 4-card stat sidebar. This becomes the new **Phase 01**, bumping every existing phase-labeled scene up by one. Docs (`BRIEF.md`, `README.md`, this file, `context/decisions.md`) were updated first, per the owner's explicit instruction, before any of the code below.
+
+- [x] Add `growthChart` (10 real logged measurements: age, length, percentile, date), `growthStats`, `bornISO`, and `getDaysSinceBirth()` to `storyData.js`
+- [x] Build `GrowthChart.jsx` (hand-rolled SVG, generic scale functions driven by real ages in months, gridlines every 2" from 18–36; hover or focus any point to reveal its age/length/percentile in a callout)
+- [x] Build `ThenNowCard.jsx` (shared shoe-size/wardrobe then→now pattern)
+- [x] Build `GrowthScene.jsx` (`id="growth"`, `tone="orange"` — a dedicated background so it doesn't read as a continuation of the title scene right before it — "Phase 01: The Growing" eyebrow, plain `h2` headline "You've grown a ton." + `BigNumber` inline stat line matching Diaper/Books' headline pattern, weight-check bars + percentile badge as bespoke scene-local markup)
+- [x] Add `#growth .scene__content` scoped layout override to `App.css` (`grid-template-areas` so the sidebar top-aligns with the intro/headline, not the chart, with intro spanning row 1 and chart+sidebar as row 2)
+- [x] Insert `GrowthScene` between `BirthScene` and `DiaperScene` in `App.jsx`
+- [x] Bump phase-eyebrow numbers: Diaper City 01→02, book stack 02→03, adventure map 03→04
+- [x] Fix: center the outings-scene subtitle (`margin-inline: auto` on `.scene-copy--map .scene-copy__body`); tightened the gap between the subtitle and the map below it
+- [x] Make the day count live: `BirthScene.jsx` headline, `CloserScene.jsx` headline, `SiteHeader.jsx` brand text, and `document.title` (via a new `useEffect` in `App.jsx`) all compute from `getDaysSinceBirth()` instead of a static "912"
+- [x] Map pin hover/focus now scales the pin ~10% (`.adventure-map__pin:hover`/`:focus-visible` transform)
+- [x] Diaper bar chart restyled to match the book scene's bordered/shadowed bars (`.bar-chart__bar` gets a border, full rounded corners, flat hard-offset shadow)
+- [x] Flip the book scene's layout (video left, copy right) as a deliberate one-off
+- [x] Removed the zoo pop-up's animal-sighting tally card (`TallyTable.jsx`, `animalTally` data) for feeling out of place next to the story/photos
+- [x] Diaper bar chart: hover/focus a bar for a tooltip with its exact rate (e.g. "10/day")
+- [ ] Verify chart renders the real 10-point series with working hover/keyboard inspection on every point; all 4 sidebar cards render; headline accent doesn't affect `BigNumber`'s other 2 callers
+- [ ] Responsive check at existing breakpoints; reduced-motion check
+- [ ] `npm run lint` and `npm run build` clean
 
 ---
 
 ## Definition of done
 
 - [ ] Live, password-protected, accessible site
-- [ ] All 5 scenes scroll end-to-end, plus the star-chart modal and adventure-map pins open/close accessibly
+- [ ] All 6 scenes scroll end-to-end, plus the star-chart modal and adventure-map pins open/close accessibly
 - [ ] Both playful interactions working
 - [ ] Flat/cartoony aesthetic evident and intentional
-- [ ] Real photos swapped in for placeholders (Mom Mom & Grandpop's House still open)
+- [x] Real photos swapped in for all placeholders
 - [ ] BRIEF.md, README.md, LICENSE, IMPLEMENTATION_PLAN.md all in repo
 - [ ] Commit history shows real progress over time with descriptive messages

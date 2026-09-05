@@ -18,7 +18,7 @@ function PhotoCarousel({ photos }) {
       <div className="photo-carousel__track" ref={trackRef}>
         {photos.map((photo) => (
           <div key={photo.src} className="photo-carousel__item">
-            <img src={photo.src} alt={photo.alt} loading="lazy" />
+            <img src={photo.src} alt={photo.alt} loading="lazy" style={{ objectPosition: photo.focus || '50% 20%' }} />
           </div>
         ))}
       </div>

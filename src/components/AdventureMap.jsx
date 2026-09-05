@@ -26,24 +26,38 @@ function AdventureMap({ locations, onSelect }) {
           <circle r="2.2" cx="-2" cy="1.5" />
         </g>
       </svg>
-      {locations.map((location, index) => (
-        <button
-          key={location.id}
-          type="button"
-          className="adventure-map__pin"
-          style={{
-            left: `${location.x}%`,
-            top: `${location.y}%`,
-            '--pin-color': location.color,
-            '--pin-delay': `${index * 100}ms`,
-          }}
-          aria-label={`View story: ${location.name}`}
-          onClick={() => onSelect(location.id)}
-        >
-          <span className="adventure-map__pin-icon" aria-hidden="true">{location.icon}</span>
-          <span className="adventure-map__pin-tag" aria-hidden="true">{location.tagline}</span>
-        </button>
-      ))}
+      {locations.map((location, index) => {
+        const tooltipId = `${location.id}-tooltip`
+
+        return (
+          <button
+            key={location.id}
+            type="button"
+            className="adventure-map__pin"
+            style={{
+              left: `${location.x}%`,
+              top: `${location.y}%`,
+              '--pin-color': location.color,
+              '--pin-delay': `${index * 100}ms`,
+            }}
+            aria-label={`View story: ${location.name}`}
+            aria-describedby={location.hoverStats ? tooltipId : undefined}
+            onClick={() => onSelect(location.id)}
+          >
+            <span className="adventure-map__pin-icon" aria-hidden="true">{location.icon}</span>
+            <span className="adventure-map__pin-tag" aria-hidden="true">{location.tagline}</span>
+            {location.hoverStats && (
+              <span className="adventure-map__tooltip" role="tooltip" id={tooltipId}>
+                {location.hoverStats.map((stat) => (
+                  <span key={stat.label} className="adventure-map__tooltip-row">
+                    <strong>{stat.value}</strong> {stat.label}
+                  </span>
+                ))}
+              </span>
+            )}
+          </button>
+        )
+      })}
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import Card from '../components/Card'
 import Polaroid from '../components/Polaroid'
 import Scene from '../components/Scene'
+import { getDaysSinceBirth } from '../data/storyData'
 
 const recapRows = [
   { icon: '✏️', title: '7,300 diapers changed', detail: 'And we survived Diaper City!', delay: 0 },
@@ -14,7 +15,7 @@ function CloserScene() {
     <Scene id="closer" labelledBy="closer-title" tone="pink">
       <div className="scene-copy">
         <p className="scene-copy__label">★ The heartwarming end (for now)</p>
-        <h1 id="closer-title">912 days of wonder.</h1>
+        <h1 id="closer-title">{getDaysSinceBirth()} days of wonder.</h1>
         <Card className="recap-card" shadow>
           <p className="recap-card__title">Let&rsquo;s wrap up the adventure so far...</p>
           <ul className="recap-card__list">
@@ -33,12 +34,19 @@ function CloserScene() {
       </div>
       <div className="scene-visual">
         <div className="photo-stack">
-          <Polaroid rotate={-2} caption="Our little Big Simba 💛">
-            [PHOTO PLACEHOLDER: the closer 1]
-          </Polaroid>
-          <Polaroid rotate={2} caption="912 days, captured 💫" className="polaroid--offset-right">
-            [PHOTO PLACEHOLDER: the closer 2]
-          </Polaroid>
+          <Polaroid
+            rotate={-2}
+            caption="Our little Big Simba 💛"
+            src="/photos/CLOSING_Lantern_Fest.JPG"
+            alt="Charlotte with Mom and Dad under a flower archway at a lantern festival"
+          />
+          <Polaroid
+            rotate={2}
+            caption={`${getDaysSinceBirth()} days, captured 💫`}
+            className="polaroid--offset-right"
+            src="/photos/CLOSING_Drawing.jpeg"
+            alt="Charlotte coloring with markers by the window"
+          />
         </div>
       </div>
     </Scene>
