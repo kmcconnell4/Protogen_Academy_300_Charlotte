@@ -30,7 +30,7 @@ function CloserScene() {
           </ul>
         </Card>
         <p className="quote-bubble">&ldquo;And it all went by in an absolute blink.&rdquo;</p>
-        <p className="scene-copy__body">Signing off from the nursery floor, Mom, Dad, &amp; Big Simba 😊</p>
+        <p className="scene-copy__body">Signing off from the nursery floor, Mom, Dad, &amp; Charlotte 😊</p>
       </div>
       <div className="scene-visual">
         <div className="photo-stack">

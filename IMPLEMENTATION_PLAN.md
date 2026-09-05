@@ -142,6 +142,17 @@ Revised mid-phase after the owner reviewed the first pass: dropped the modal in 
 - [x] Verify all 11 markers render staggered with correct media/emoji; expand-in-place works for video, photo, and emoji entries (spot-checked "Peekaboo," "First bite of real food," and "First tooth"); collapse button returns to compact view; fixed a real bug where the collapse button was clipped by the marker's own `overflow: hidden` (moved the circular clip to an inner wrapper)
 - [x] Responsive check at `60rem`/`34rem` and full desktop width (verified single-column mobile layout, desktop alternating layout, and the expand interaction all render correctly); fixed a real CSS Grid auto-placement bug only reproducible above `60rem` where left-side labels were silently pushed into an implicit second row (added explicit `grid-row: 1` to the marker and both label rules); added an opaque background card behind the expanded state's text so the timeline's connecting line no longer shows through it; `npm run lint` and `npm run build` clean
 
+## Phase 11 — Texture/favicon polish + a real bug fix
+
+Smaller follow-up round: per-scene background doodle textures (replacing the sitewide polka-dot pattern), a real favicon, a milestone-timeline layout tweak, and a genuine bug fix found while verifying the above.
+
+- [x] Replace the single sitewide polka-dot `.scene::before` texture with a distinct small inline-SVG doodle motif per scene id (`#born` dots+triangles, `#growth` chevrons, `#milestones` spirals, `#diapers` cubes, `#books` dashes, `#outings` mountains+dashed route, `#closer` hearts+sparkles), Rugrats-title-card inspired; tuned opacity down to 0.1 after an initial pass read too heavy
+- [x] Replace the leftover generic placeholder favicon with a small flat lion-face mark (nods to "Big Simba")
+- [x] Milestone timeline's compact card: stack age above title on two lines (new `.milestone-timeline__card-title` span) instead of "AGE — Title" on one line, matching the expanded view's layout
+- [x] Fixed a real bug in `Scene.jsx`: `updateProgress()` divided by `window.innerHeight` with no guard, so a single `0`-height read poisoned `progress` to `NaN` permanently (`Math.max(current, NaN)` never recovers), leaving that scene's entrance animation stuck invisible forever. Added early-returns for a falsy viewport height or a non-finite ratio.
+- [x] Verified `getDaysSinceBirth()` is a live computation (`Date.now()` minus `bornISO`), not a hardcoded figure — confirmed it matches the expected day count for the current date
+- [x] `npm run lint` and `npm run build` clean
+
 ---
 
 ## Definition of done

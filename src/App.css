@@ -26,12 +26,10 @@
   margin: 0;
 }
 
-.site-header__dot {
-  background: var(--crayon-red);
-  border-radius: 50%;
+.site-header__icon {
   display: inline-block;
-  height: 0.55rem;
-  width: 0.55rem;
+  height: 1.15rem;
+  width: 1.15rem;
 }
 
 .site-header__hint {

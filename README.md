@@ -90,7 +90,7 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
 
 ## The 7 scenes (+ 1 modal Easter egg)
 
-1. **912 days ago, you were born** — title slide: headline, birth stats pill (with the Pisces Easter-egg trigger), big number, Polaroid photo
+1. **[N] days ago, you were born** — title slide: headline, birth stats pill (with the Pisces Easter-egg trigger), a live day-count big number (reads "912" as of writing), Polaroid photo
 2. **The growing** 📈 — height chart plotting 10 real pediatric check-ins from birth to 24 months (hover or focus a point for its age/length/percentile) + a sidebar of weight/shoe-size/wardrobe/percentile stat cards
 3. **The Firsts** 🎉 — a vertical timeline of 11 real milestones (curated from a much longer tracked log); tap a marker to expand it into the full photo or video, with the story below
 4. **Diaper City → Potty Trained** 🚽 — *interaction: bar chart tapering to zero, hover/focus a bar for its exact rate*
