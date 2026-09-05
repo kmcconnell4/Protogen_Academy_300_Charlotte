@@ -11,7 +11,7 @@ function OutingsScene() {
   return (
     <Scene id="outings" labelledBy="outings-title" tone="blue">
       <div className="scene-copy scene-copy--map">
-        <p className="scene-copy__label">Phase 04: Adventures galore</p>
+        <p className="scene-copy__label">Phase 05: Adventures galore</p>
         <h2 id="outings-title">We&rsquo;ve been on so many adventures.</h2>
         <p className="scene-copy__body">Here are some of your favorite places.</p>
       </div>

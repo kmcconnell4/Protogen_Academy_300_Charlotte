@@ -112,16 +112,42 @@ A new "Growth" scene lands right after the title scene, showing Charlotte's real
 - [x] Flip the book scene's layout (video left, copy right) as a deliberate one-off
 - [x] Removed the zoo pop-up's animal-sighting tally card (`TallyTable.jsx`, `animalTally` data) for feeling out of place next to the story/photos
 - [x] Diaper bar chart: hover/focus a bar for a tooltip with its exact rate (e.g. "10/day")
-- [ ] Verify chart renders the real 10-point series with working hover/keyboard inspection on every point; all 4 sidebar cards render; headline accent doesn't affect `BigNumber`'s other 2 callers
+- [x] Verify chart renders the real 10-point series with working hover/keyboard inspection on every point; all 4 sidebar cards render; headline accent doesn't affect `BigNumber`'s other 2 callers
 - [ ] Responsive check at existing breakpoints; reduced-motion check
 - [ ] `npm run lint` and `npm run build` clean
+
+## Phase 9 — Sitewide "Wrapped" motion upgrade
+
+Broader "elements drop in as you scroll into a scene" motion across every scene (headline/body/stat/chart/photo staggered entrance, count-up numbers, a self-drawing growth-chart line), on top of the handful of bespoke animations that already existed. Docs updated first per the established convention.
+
+- [x] Add `--ease-bounce` overshoot easing token to `src/styles/tokens.css`; swap existing bespoke animations (`.bar-chart__bar`, `.ranked-bars__row`, `.recap-card__row`, `.adventure-map__pin`) from `var(--ease-flat)` to `var(--ease-bounce)`
+- [x] Add generic staggered entrance CSS for `.scene-copy > *` (nth-child delays) and `.polaroid`/`.photo-stack` children, gated on `.scene[data-visible='true']` — no JSX changes needed in existing scenes
+- [x] `GrowthChart.jsx`: `pathLength="1"` + `stroke-dasharray`/`stroke-dashoffset` transition so the height line draws itself in on scroll; points fade/pop in with per-index stagger
+- [x] New `src/hooks/useCountUp.js` (own `IntersectionObserver`, one-shot, parses/reformats `~7,300` / `~340` / `15.5 inches`-style values, checks `prefers-reduced-motion` and skips straight to final value if set)
+- [x] Wire `useCountUp` into `BigNumber.jsx` for both variants — verified all 3 existing callers (Diaper, Books, Growth) count up correctly with no prop changes (spot-checked the diaper counter mid-animation: `~0 → ~451 → ~1,003 → ... → ~4,764` before settling)
+- [x] Verify: every scene's content staggers in once per scroll (not on every re-scroll, matching `Scene.jsx`'s existing monotonic visibility); reduced-motion check done by code review (`useCountUp` checks `prefers-reduced-motion` before animating) — not live-tested against a real OS setting, since this browser environment has no way to toggle it
+- [x] Responsive check at `60rem`/`34rem`; `npm run lint` and `npm run build` clean
+
+## Phase 10 — The Firsts (milestones timeline scene, new Phase 02)
+
+A new scene right after Growth showing 11 real, owner-tracked milestones on a vertical timeline. Becomes the new **Phase 02**, bumping Diaper City/book stack/adventure map up one each. Docs updated first.
+
+Revised mid-phase after the owner reviewed the first pass: dropped the modal in favor of an in-place expand (the marker itself grows into a large circle showing the photo/video), removed the COVID milestone, and wired in the real photos/videos the owner added (filenames prefixed `TIMELINE_`) — see `context/decisions.md`.
+
+- [x] Add `milestones` export to `storyData.js` (11 curated entries: `id`, `ageMonths`, `ageLabel`, `title`, `description`, and either a `media: { type, src, alt }` or an `emoji` fallback)
+- [x] Build `MilestoneTimeline.jsx` (CSS `::before` vertical line, alternating left/right marker buttons on desktop, single column below `60rem`, per-index `--milestone-delay` stagger matching `AdventureMap.jsx`'s pin technique)
+- [x] Markers show a real photo/video thumbnail when `media` exists, else the milestone's `emoji`; clicking toggles an in-place expanded state (own React state in `MilestoneTimeline.jsx`, no modal) growing the circle to a large photo/playable-video view with age/title/description revealed beneath it, plus a small collapse button
+- [x] Build `MilestoneScene.jsx` (`id="milestones"`, `tone="blue"`, "Phase 02: The Firsts" eyebrow, headline "We've hit all the firsts.", scoped `#milestones .scene__content` single-column override matching `#outings`'s pattern)
+- [x] Insert `MilestoneScene` between `GrowthScene` and `DiaperScene` in `App.jsx`; bump phase-eyebrow numbers: Diaper City 02→03, book stack 03→04, adventure map 04→05
+- [x] Verify all 11 markers render staggered with correct media/emoji; expand-in-place works for video, photo, and emoji entries (spot-checked "Peekaboo," "First bite of real food," and "First tooth"); collapse button returns to compact view; fixed a real bug where the collapse button was clipped by the marker's own `overflow: hidden` (moved the circular clip to an inner wrapper)
+- [x] Responsive check at `60rem`/`34rem` and full desktop width (verified single-column mobile layout, desktop alternating layout, and the expand interaction all render correctly); fixed a real CSS Grid auto-placement bug only reproducible above `60rem` where left-side labels were silently pushed into an implicit second row (added explicit `grid-row: 1` to the marker and both label rules); added an opaque background card behind the expanded state's text so the timeline's connecting line no longer shows through it; `npm run lint` and `npm run build` clean
 
 ---
 
 ## Definition of done
 
 - [ ] Live, password-protected, accessible site
-- [ ] All 6 scenes scroll end-to-end, plus the star-chart modal and adventure-map pins open/close accessibly
+- [ ] All 7 scenes scroll end-to-end, plus the star-chart modal and adventure-map pins open/close accessibly
 - [ ] Both playful interactions working
 - [ ] Flat/cartoony aesthetic evident and intentional
 - [x] Real photos swapped in for all placeholders

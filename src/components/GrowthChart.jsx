@@ -51,7 +51,11 @@ function GrowthChart({ data, yMin = 18, yMax = 36, yStep = 2, xTickStep = 6, ari
               {months === 0 ? 'Birth' : `${months}mo`}
             </text>
           ))}
-          <polyline className="growth-chart__line growth-chart__line--charlotte" points={linePoints} />
+          <polyline
+            className="growth-chart__line growth-chart__line--charlotte"
+            points={linePoints}
+            pathLength="1"
+          />
           {data.map((point, index) => (
             <circle
               key={point.label}
@@ -59,6 +63,7 @@ function GrowthChart({ data, yMin = 18, yMax = 36, yStep = 2, xTickStep = 6, ari
               cx={xScale(point.months)}
               cy={yScale(point.charlotte)}
               r={index === selectedIndex ? 6 : 4}
+              style={{ '--point-delay': `${300 + index * 60}ms` }}
             />
           ))}
         </g>

@@ -7,6 +7,7 @@ import BooksScene from './scenes/BooksScene'
 import CloserScene from './scenes/CloserScene'
 import DiaperScene from './scenes/DiaperScene'
 import GrowthScene from './scenes/GrowthScene'
+import MilestoneScene from './scenes/MilestoneScene'
 import OutingsScene from './scenes/OutingsScene'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <main>
         <BirthScene />
         <GrowthScene />
+        <MilestoneScene />
         <DiaperScene />
         <BooksScene />
         <OutingsScene />

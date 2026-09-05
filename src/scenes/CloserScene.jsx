@@ -6,7 +6,7 @@ import { getDaysSinceBirth } from '../data/storyData'
 const recapRows = [
   { icon: '✏️', title: '7,300 diapers changed', detail: 'And we survived Diaper City!', delay: 0 },
   { icon: '📚', title: '340 books read & re-read', detail: 'Peekaboo Feelings: the undisputed champ', delay: 90 },
-  { icon: '🦒', title: '48 family outings & zoo safaris', detail: 'Lions: 17, giraffes: 12, penguins: 7', delay: 180 },
+  { icon: '🦒', title: 'Countless family outings & zoo trips', detail: 'Lions were always the favorite', delay: 180 },
   { icon: '❤️', title: '1 incredible little kid', detail: 'Who turned our lives completely upside down', delay: 270 },
 ]
 

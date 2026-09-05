@@ -10,7 +10,7 @@ An interactive data story about the first 2.5 years of a life — told in the sm
 
 ## What this is
 
-A scroll-driven ("scrollytelling") narrative in **6 scenes** (plus a bonus modal Easter egg), with a **flat, bold & cartoony aesthetic**. Funny on the surface, quietly moving by the end. The audience is other parents (who'll feel seen) and non-parent friends (the "you have no idea" angle).
+A scroll-driven ("scrollytelling") narrative in **7 scenes** (plus a bonus modal Easter egg), with a **flat, bold & cartoony aesthetic**. Funny on the surface, quietly moving by the end. The audience is other parents (who'll feel seen) and non-parent friends (the "you have no idea" angle).
 
 Full concept, data, and design direction live in **[BRIEF.md](./BRIEF.md)**. The step-by-step build checklist lives in **[IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md)**.
 
@@ -37,7 +37,7 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
 | Rubric requirement | Where it's addressed |
 |---|---|
 | Site is live, accessible, password-protected | Deploy step in `IMPLEMENTATION_PLAN.md` (Phase 5) |
-| Core flows work end-to-end | All 6 scenes scroll + 2 interactions + the star-chart modal (Phases 2–3, Phase 6) |
+| Core flows work end-to-end | All 7 scenes scroll + 2 interactions + the star-chart modal (Phases 2–3, Phase 6) |
 | Build reflects the industry/user in the brief | `BRIEF.md` subject + flat/cartoony direction |
 | AI scaffolding present and organized | `BRIEF.md`, `README.md`, `IMPLEMENTATION_PLAN.md`, `/context` docs |
 | README.md and LICENSE in repo root | This file + `LICENSE` |
@@ -71,6 +71,7 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
     │   ├── ThenNowCard.jsx    ← growth-scene shoe-size/wardrobe then→now card
     │   ├── BarChart.jsx       ← diaper-scene bar chart
     │   ├── RankedBarList.jsx  ← books-scene ranked bar list
+    │   ├── MilestoneTimeline.jsx ← firsts-scene vertical timeline; markers expand in place (photo/video/emoji)
     │   ├── SiteHeader.jsx     ← persistent sticky header
     │   ├── Modal.jsx          ← accessible modal shell (focus trap, Escape, restore)
     │   ├── StarChartModal.jsx ← the star-chart Easter egg
@@ -78,22 +79,25 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
     │   ├── AdventureMap.jsx   ← the outings-scene illustrated map + pins
     │   ├── LocationModal.jsx  ← per-pin story + photos pop-up (reuses Modal.jsx)
     │   └── PhotoCarousel.jsx  ← swipeable 3-at-a-time photo carousel inside LocationModal
-    ├── /scenes                ← the 6 scroll-scene contents
+    ├── /hooks
+    │   └── useCountUp.js      ← count-up-from-zero animation used by BigNumber
+    ├── /scenes                ← the 7 scroll-scene contents
     ├── /styles                ← design tokens (colors, type, flat-shadow/card system)
     └── /data                  ← invented dataset (from BRIEF §6)
 ```
 
 ---
 
-## The 6 scenes (+ 1 modal Easter egg)
+## The 7 scenes (+ 1 modal Easter egg)
 
 1. **912 days ago, you were born** — title slide: headline, birth stats pill (with the Pisces Easter-egg trigger), big number, Polaroid photo
 2. **The growing** 📈 — height chart plotting 10 real pediatric check-ins from birth to 24 months (hover or focus a point for its age/length/percentile) + a sidebar of weight/shoe-size/wardrobe/percentile stat cards
-3. **Diaper City → Potty Trained** 🚽 — *interaction: bar chart tapering to zero, hover/focus a bar for its exact rate*
-4. **The book stack** 📚 — *interaction: ranked bars fill in as you scroll*
-5. **The adventure map** 🗺️ — a large illustrated map with 5 pins (Zoo, Aquarium, Please Touch Museum, Mom Mom & Grandpop's, PG & Pappy's); tap a pin for a story + photos, the Zoo pin carries the old Big Cat Falls/giraffe-feeding copy
-6. **The closer** 🦁 — recap card rolling up to a live day count
-7. **✨ Easter egg:** Written in the Stars — click the Pisces icon on scene 1 for a modal star chart (Sun/Rising/Moon)
+3. **The Firsts** 🎉 — a vertical timeline of 11 real milestones (curated from a much longer tracked log); tap a marker to expand it into the full photo or video, with the story below
+4. **Diaper City → Potty Trained** 🚽 — *interaction: bar chart tapering to zero, hover/focus a bar for its exact rate*
+5. **The book stack** 📚 — *interaction: ranked bars fill in as you scroll*
+6. **The adventure map** 🗺️ — a large illustrated map with 5 pins (Zoo, Aquarium, Please Touch Museum, Mom Mom & Grandpop's, PG & Pappy's); tap a pin for a story + photos, the Zoo pin carries the old Big Cat Falls/giraffe-feeding copy
+7. **The closer** 🦁 — recap card rolling up to a live day count
+8. **✨ Easter egg:** Written in the Stars — click the Pisces icon on scene 1 for a modal star chart (Sun/Rising/Moon)
 
 ---
 
@@ -121,7 +125,7 @@ The protected production deployment is available at [912 Days on Vercel](https:/
 - Responsive web app (scroll-based, with CSS scroll-snapping so each scene locks into focus). Keep interactions light — the story is the thing, interaction is icing.
 - Primary interaction across the whole piece is **scroll progress**; the 2 named interactions are the only accents.
 - The star-chart modal is fully keyboard-accessible: `role="dialog"` + `aria-modal`, a focus trap while open, Escape/click-outside to close, and focus restored to the trigger button on close.
-- See `BRIEF.md` §8 for scope guardrails (6 scroll scenes + 1 modal Easter egg, 2 interactions, reuse one scene pattern).
+- See `BRIEF.md` §8 for scope guardrails (7 scroll scenes + 1 modal Easter egg, 2 interactions, reuse one scene pattern).
 
 ---
 

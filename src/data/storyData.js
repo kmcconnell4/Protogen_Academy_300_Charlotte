@@ -50,6 +50,101 @@ export const growthStats = {
   wardrobe: { then: 'Newborn', now: '3T' },
 }
 
+// Curated from the owner's full tracked-milestone log (30+ entries) — not every
+// tracked first is shown, just a pace-and-variety-picked subset. See context/decisions.md.
+// Each entry uses real video/photo where the owner shot one for it (filenames
+// prefixed TIMELINE_); otherwise it falls back to a representative emoji.
+export const milestones = [
+  {
+    id: 'first-laugh',
+    ageMonths: 4,
+    ageLabel: '4 months',
+    title: 'First laugh',
+    description: 'A tickle to the belly turned into the first real giggle.',
+    media: { type: 'video', src: '/photos/TIMELINE_Laughing.MOV', alt: 'Charlotte laughing for the first time' },
+  },
+  {
+    id: 'first-bite',
+    ageMonths: 4.5,
+    ageLabel: '4.5 months',
+    title: 'First bite of real food',
+    description: 'Held up for inspection first, then devoured — self-feeding from day one.',
+    media: { type: 'photo', src: '/photos/TIMELINE_Blueberries.jpeg', alt: 'Charlotte eating blueberries' },
+  },
+  {
+    id: 'first-tooth',
+    ageMonths: 6,
+    ageLabel: '6 months',
+    title: 'First tooth',
+    description: 'Two brand-new teeth on the bottom, right on schedule.',
+    emoji: '🦷',
+  },
+  {
+    id: 'first-word',
+    ageMonths: 8,
+    ageLabel: '8 months',
+    title: 'First word: "Hi"',
+    description: 'Said to absolutely everyone, whether they said it first or not.',
+    media: { type: 'video', src: '/photos/TIMELINE_talking.mov', alt: 'Charlotte talking' },
+  },
+  {
+    id: 'first-step',
+    ageMonths: 10.5,
+    ageLabel: '10.5 months',
+    title: 'First step',
+    description: 'Wobbly, brief, and immediately followed by a proud round of applause.',
+    media: { type: 'video', src: '/photos/TIMELINE_walking.mov', alt: 'Charlotte taking her first steps' },
+  },
+  {
+    id: 'crawling',
+    ageMonths: 12,
+    ageLabel: '12 months',
+    title: 'Crawling... consistently',
+    description: "Yes, after she'd already figured out walking. Priorities.",
+    emoji: '🐛',
+  },
+  {
+    id: 'first-sentence',
+    ageMonths: 15,
+    ageLabel: '15 months',
+    title: 'First sentence: "Bye bye dada"',
+    description: 'Short, sweet, and devastating to Dad.',
+    emoji: '👋',
+  },
+  {
+    id: 'peekaboo',
+    ageMonths: 16,
+    ageLabel: '16 months',
+    title: 'Peekaboo',
+    description: 'The bit that never stops being funny, apparently for either of you.',
+    media: { type: 'video', src: '/photos/TIMELINE_PEEKABOO.MOV', alt: 'Charlotte playing peekaboo' },
+  },
+  {
+    id: 'singing',
+    ageMonths: 21,
+    ageLabel: '21 months',
+    title: 'Singing (and dancing)',
+    description: 'Full performances, on request or not.',
+    media: { type: 'video', src: '/photos/TIMELINE_Dancing.MOV', alt: 'Charlotte dancing' },
+  },
+  {
+    id: 'potty-trained',
+    ageMonths: 23.5,
+    ageLabel: '22–25 months',
+    title: 'Officially potty trained',
+    description: `From ${storyStats.diapers.value} diapers to zero — the Diaper City saga finally wraps.`,
+    emoji: '🚽',
+  },
+  {
+    id: 'spelled-name',
+    ageMonths: 30,
+    ageLabel: '~2.5 years',
+    title: 'Spelled her own name',
+    description: 'C-H-A-R-L-O-T-T-E, letter by letter, completely unprompted.',
+    media: { type: 'video', src: '/photos/TIMELINE_SPELLING.mov', alt: 'Charlotte spelling her name' },
+  },
+]
+
 export const favoriteBooks = [
   { title: 'Peekaboo Feelings', reads: 200, color: 'var(--crayon-yellow)', note: 'the OG favorite' },
   { title: 'Grumpy Monkey', reads: 60, color: 'var(--crayon-orange)' },

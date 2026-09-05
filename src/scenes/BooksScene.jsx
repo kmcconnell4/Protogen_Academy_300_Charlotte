@@ -8,7 +8,7 @@ function BooksScene() {
   return (
     <Scene id="books" labelledBy="books-title" tone="yellow">
       <div className="scene-copy">
-        <p className="scene-copy__label">Phase 03: Repetitive literary genius</p>
+        <p className="scene-copy__label">Phase 04: Repetitive literary genius</p>
         <h2 id="books-title">Again. Again. Again.</h2>
         <BigNumber variant="inline" accent="var(--crayon-blue)" value={storyStats.books.value} label="books devoured." />
         <p className="scene-copy__body">

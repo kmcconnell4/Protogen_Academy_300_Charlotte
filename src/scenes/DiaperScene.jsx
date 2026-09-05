@@ -8,7 +8,7 @@ function DiaperScene() {
   return (
     <Scene id="diapers" labelledBy="diapers-title" tone="green">
       <div className="scene-copy">
-        <p className="scene-copy__label">Phase 02: Welcome to Diaper City</p>
+        <p className="scene-copy__label">Phase 03: Welcome to Diaper City</p>
         <h2 id="diapers-title">
           The supplies.
           <br />
@@ -22,10 +22,6 @@ function DiaperScene() {
           data={diaperRateByPeriod}
           ariaLabel="Daily diaper rate over time, tapering from 10 a day to 0 as she got potty trained"
         />
-        <p className="quote-bubble">
-          &ldquo;Send help (and maybe more wet wipes).&rdquo;
-          <span className="quote-bubble__attribution">— Mom &amp; Dad&rsquo;s washing machines</span>
-        </p>
       </div>
       <div className="scene-visual">
         <Polaroid
