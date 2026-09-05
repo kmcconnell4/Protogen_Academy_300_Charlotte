@@ -494,6 +494,18 @@ h2 {
   margin-right: -1.5rem;
 }
 
+.photo-stack .polaroid {
+  max-width: 18rem;
+}
+
+.photo-stack .polaroid__photo {
+  min-height: 10rem;
+}
+
+.photo-stack .polaroid__media {
+  max-height: 18rem;
+}
+
 .polaroid {
   background: var(--paper);
   border: var(--card-border-width) solid var(--ink);
