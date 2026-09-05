@@ -169,10 +169,10 @@ Note: this is a client-side convenience gate, not real security — the password
 
 ## Definition of done
 
-- [ ] Live, password-protected, accessible site
-- [ ] All 7 scenes scroll end-to-end, plus the star-chart modal and adventure-map pins open/close accessibly
-- [ ] Both playful interactions working
-- [ ] Flat/cartoony aesthetic evident and intentional
+- [x] Live, password-protected, accessible site
+- [x] All 7 scenes scroll end-to-end, plus the star-chart modal and adventure-map pins open/close accessibly
+- [x] Both playful interactions working
+- [x] Flat/cartoony aesthetic evident and intentional
 - [x] Real photos swapped in for all placeholders
-- [ ] BRIEF.md, README.md, LICENSE, IMPLEMENTATION_PLAN.md all in repo
-- [ ] Commit history shows real progress over time with descriptive messages
+- [x] BRIEF.md, README.md, LICENSE, IMPLEMENTATION_PLAN.md all in repo
+- [x] Commit history shows real progress over time with descriptive messages

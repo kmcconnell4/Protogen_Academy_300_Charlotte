@@ -146,11 +146,11 @@ For the "does it look right?" dimension: bold flat color blocks, hard-edged cart
 
 ## 9. What "done" looks like
 
-- [ ] Live, password-protected, accessible site
-- [ ] All 7 scenes scroll end-to-end, plus the star-chart modal opens/closes accessibly
-- [ ] 2 playful interactions working (diaper chart, book stack)
-- [ ] Flat/cartoony aesthetic evident and intentional
-- [ ] Photo placeholders swapped for real images
-- [ ] BRIEF.md in repo root, matching the build
-- [ ] README.md + LICENSE in root
-- [ ] Commit history shows real progress over time
+- [x] Live, password-protected, accessible site
+- [x] All 7 scenes scroll end-to-end, plus the star-chart modal opens/closes accessibly
+- [x] 2 playful interactions working (diaper chart, book stack)
+- [x] Flat/cartoony aesthetic evident and intentional
+- [x] Photo placeholders swapped for real images
+- [x] BRIEF.md in repo root, matching the build
+- [x] README.md + LICENSE in root
+- [x] Commit history shows real progress over time

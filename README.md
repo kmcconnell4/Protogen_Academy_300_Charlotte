@@ -36,7 +36,7 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
 
 | Rubric requirement | Where it's addressed |
 |---|---|
-| Site is live, accessible, password-protected | Deploy step in `IMPLEMENTATION_PLAN.md` (Phase 5) |
+| Site is live, accessible, password-protected | Deploy step in `IMPLEMENTATION_PLAN.md` (Phase 5); password gate is `PasswordGate.jsx` (Phase 12) |
 | Core flows work end-to-end | All 7 scenes scroll + 2 interactions + the star-chart modal (Phases 2–3, Phase 6) |
 | Build reflects the industry/user in the brief | `BRIEF.md` subject + flat/cartoony direction |
 | AI scaffolding present and organized | `BRIEF.md`, `README.md`, `IMPLEMENTATION_PLAN.md`, `/context` docs |
@@ -73,6 +73,7 @@ This project is reviewed on three dimensions — **Does it work? / Is the repo s
     │   ├── RankedBarList.jsx  ← books-scene ranked bar list
     │   ├── MilestoneTimeline.jsx ← firsts-scene vertical timeline; markers expand in place (photo/video/emoji)
     │   ├── SiteHeader.jsx     ← persistent sticky header
+    │   ├── PasswordGate.jsx   ← lightweight client-side password gate wrapping the app
     │   ├── Modal.jsx          ← accessible modal shell (focus trap, Escape, restore)
     │   ├── StarChartModal.jsx ← the star-chart Easter egg
     │   ├── PlacementCard.jsx  ← one Sun/Rising/Moon card inside the star-chart modal
@@ -126,6 +127,7 @@ The production deployment is available at [912 Days on Vercel](https://protogena
 - Primary interaction across the whole piece is **scroll progress**; the 2 named interactions are the only accents.
 - The star-chart modal is fully keyboard-accessible: `role="dialog"` + `aria-modal`, a focus trap while open, Escape/click-outside to close, and focus restored to the trigger button on close.
 - See `BRIEF.md` §8 for scope guardrails (7 scroll scenes + 1 modal Easter egg, 2 interactions, reuse one scene pattern).
+- The whole app is wrapped in `PasswordGate.jsx` — a lightweight client-side password check, not real security (the password ships in the JS bundle). It's meant to keep casual visitors out, not withstand a determined one; see `context/decisions.md` for why this was chosen over Vercel's own deployment protection.
 
 ---
 

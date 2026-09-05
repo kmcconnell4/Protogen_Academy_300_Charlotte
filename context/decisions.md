@@ -17,6 +17,13 @@ A running record of design and build decisions. **Append a new dated entry each 
 
 ## Decisions
 
+### 2026-09-05 — Removed stale `.impeccable/surfaces/src-app-jsx.md`
+- **Deleted the `.impeccable` design-skill's "direction contract" for `src/App.jsx`**, same category as `PRODUCT.md` and same reasoning: it described the pre-pivot crayon/sketchbook direction ("a huge yellow '912'" title, "no card or navigation competes with it") that no longer matches the built site (flat/cartoony aesthetic, a persistent sticky nav header). Unreferenced anywhere else in the repo, so nothing else needed updating.
+
+### 2026-09-05 — Second doc-staleness pass: unchecked "done" boxes, missing component
+- **`BRIEF.md` §9 and `IMPLEMENTATION_PLAN.md`'s "Definition of done" checklists were entirely unchecked** despite every item being demonstrably true — live+password-protected site, all 7 scenes + modal/pins working, both interactions working, aesthetic evident, photos swapped in, docs present, real commit history. All verified this session (live-site check, component-by-component testing). Checked them all off rather than leaving a "not done" signal on a genuinely finished project.
+- **README's project structure/component list was missing `PasswordGate.jsx`** — added it, plus a one-line mention in Tech notes explaining it's a lightweight client-side gate, not real security, and why it exists instead of relying on Vercel's own deployment protection. Also pointed the rubric table's password-protection row at Phase 12 (where the actual gate is documented) alongside the existing Phase 5 reference.
+
 ### 2026-09-05 — Removed stale `PRODUCT.md`
 - **Deleted `PRODUCT.md`**, a leftover `.impeccable` design-skill scaffolding file from early in the project. It was redundant with `BRIEF.md` (which covers purpose, audience, positioning, and principles more thoroughly) and, worse, actively stale: it still described the pre-pivot crayon/hand-drawn aesthetic, referenced the since-cut Sleep and Vocabulary scenes, referenced a 3rd interaction (a word-pronunciation toggle) that was cut along with its scene, and claimed no production photos existed yet. It was never referenced from README/IMPLEMENTATION_PLAN and had drifted out of the doc-sync loop this project otherwise keeps tight — a stale contradictory doc in repo root works against the rubric's "context docs actually match what you built" criterion more than having no such doc at all.
 
