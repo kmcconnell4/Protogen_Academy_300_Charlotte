@@ -1617,6 +1617,10 @@ h2 {
     align-items: center;
   }
 
+  .photo-stack .polaroid--offset-right {
+    margin-right: 0;
+  }
+
   .bar-chart {
     gap: 0.5rem;
   }

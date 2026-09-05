@@ -13,9 +13,19 @@ function Scene({ children, className = '', id, labelledBy, tone = 'paper' }) {
     }
 
     const updateProgress = () => {
+      const viewportHeight = window.innerHeight
+
+      if (!viewportHeight) {
+        return
+      }
+
       const bounds = scene.getBoundingClientRect()
-      const visibleHeight = Math.min(bounds.bottom, window.innerHeight) - Math.max(bounds.top, 0)
-      const ratio = Math.max(0, visibleHeight) / Math.min(bounds.height, window.innerHeight)
+      const visibleHeight = Math.min(bounds.bottom, viewportHeight) - Math.max(bounds.top, 0)
+      const ratio = Math.max(0, visibleHeight) / Math.min(bounds.height, viewportHeight)
+
+      if (!Number.isFinite(ratio)) {
+        return
+      }
 
       setProgress((current) => Math.max(current, ratio))
     }
