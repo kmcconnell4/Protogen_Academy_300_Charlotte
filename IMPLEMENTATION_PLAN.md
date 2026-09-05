@@ -55,9 +55,9 @@ Phased build checklist for the P302 interactive data story.
 ## Phase 5 — Deploy & finalize
 
 - [x] Deploy to a live host (Vercel/Netlify/etc.)
-- [x] Password-protect the deployed site (per Protogen guidance)
-- [ ] Confirm live site loads and all flows work end-to-end
-- [ ] Final check: `BRIEF.md` still matches what was actually built (update if drifted)
+- [x] Password-protect the deployed site (per Protogen guidance) — built a lightweight in-app `PasswordGate` component instead of relying on Vercel's account-gated deployment protection (which had locked reviewers out — see `context/decisions.md`). Client-side only, matching the "lightweight" ask; the password persists per-browser via `localStorage` so it only needs to be entered once.
+- [x] Confirm live site loads and all flows work end-to-end — verified live on `protogenacademy300charlotte.vercel.app`: all 7 scenes scroll in order, star-chart modal, milestone expand-in-place, and adventure-map pin pop-up all open/close correctly, diaper/book interactions render correctly
+- [x] Final check: `BRIEF.md` still matches what was actually built (update if drifted) — reviewed against the live site this session, no drift found
 - [x] Confirm README.md + LICENSE are in root and commit history reads cleanly
 
 ## Phase 6 — Flat/cartoony visual pivot
@@ -152,6 +152,18 @@ Smaller follow-up round: per-scene background doodle textures (replacing the sit
 - [x] Fixed a real bug in `Scene.jsx`: `updateProgress()` divided by `window.innerHeight` with no guard, so a single `0`-height read poisoned `progress` to `NaN` permanently (`Math.max(current, NaN)` never recovers), leaving that scene's entrance animation stuck invisible forever. Added early-returns for a falsy viewport height or a non-finite ratio.
 - [x] Verified `getDaysSinceBirth()` is a live computation (`Date.now()` minus `bornISO`), not a hardcoded figure — confirmed it matches the expected day count for the current date
 - [x] `npm run lint` and `npm run build` clean
+
+## Phase 12 — Lightweight password gate
+
+A final rubric scan found the live site had no real password protection (see Phase 11's follow-up entry above) and that a previously-linked deployment URL required Vercel account login, which would lock out reviewers. Replaced both with a simple in-app gate under the owner's control.
+
+- [x] Build `PasswordGate.jsx` — a small client-side component wrapping the whole app; checks the entered value against a fixed password, shows an inline error on mismatch, and stores the unlocked state in `localStorage` so it only needs to be entered once per browser
+- [x] Wrap `App.jsx`'s `SiteHeader` + `main` in `PasswordGate` so nothing renders until unlocked
+- [x] Style the gate to match the flat/cartoony card system (`Card`-style border/shadow, crayon-blue button, crayon-red error text)
+- [x] Verified live: wrong password shows the error and doesn't unlock; correct password unlocks immediately; reload after unlocking stays unlocked (no re-prompt)
+- [x] `npm run lint` and `npm run build` clean
+
+Note: this is a client-side convenience gate, not real security — the password lives in the shipped JS bundle and is visible to anyone who opens dev tools. That matches the "lightweight" ask and Protogen's guidance that this is recommended, not a security requirement.
 
 ---
 
